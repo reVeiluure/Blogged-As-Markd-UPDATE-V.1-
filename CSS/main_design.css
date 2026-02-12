@@ -237,6 +237,24 @@ header h4 mark {
     gap: 20px; 
     justify-content: space-between;
 }
+h1.title-page {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 72px;
+    letter-spacing: 1rem;
+}
+h2 > b > a {
+    color: black;
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    border: 2px solid black
+}
+h2 > b > a:hover {
+    text-decoration: underline;
+    background-color: yellow;
+    transition: all 0.5s ease;
+}
 nav h4.logo {
     margin: 0;
     font-size: 25px;
@@ -547,7 +565,7 @@ img {
 }
 h2 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 40px;
+    font-size: 32px;
 }
 main {
     margin: 0 5rem;
