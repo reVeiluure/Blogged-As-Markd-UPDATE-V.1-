@@ -1,0 +1,206 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blogged as Mark'd | HOME</title>
+        <link rel="stylesheet" href="CSS/main_design.css">
+        <link rel="stylesheet" href="CSS/gallery.css">
+        <script>
+            function filterGallery(category) {
+                const buttons = document.querySelectorAll('.gallery-nav button');
+                const items = document.querySelectorAll('.grid-container > div');
+
+                buttons.forEach(btn => btn.classList.remove('active'));
+                event.target.classList.add('active');
+
+                items.forEach(item => {
+                    if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'inline-block';
+                    } else {
+                    item.style.display = 'none';
+                    }
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <header class="blog-header">
+            <div>
+                <nav class="nav-header">
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#aboutme_dd">About Me</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="ABOUT ME/mateo_biography_csad.html" target="_self">Biography</a></li>
+                                </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#blog_dd">Blog</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="BLOG STORIES/blogstory1.html" target="_self">Blog Part 1</a></li>
+                                    <li><a href="BLOG STORIES/blogstory2.html" target="_self">Blog Part 2</a></li>
+                                    <li><a href="BLOG STORIES/blogstory3.html" target="_self">Blog Part 3</a></li>
+                                </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#photo-gallery_dd">Photo Gallery</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="gallery_self.html" target="_self">Myself</a></li>
+                                    <li id="non-anchor">My Arts</li>
+                                </ul>
+                        </li>
+                    </ul>
+                <h4 class="logo"><mark>Blogged as Mark'd</mark></h4>
+                </nav>
+            </div>
+        </header>
+        <nav class="gallery-nav">
+            <ul>
+                <li><button onclick="filterGallery('all')">All</button></li>
+                <li><button onclick="filterGallery('photography')">Photography</button></li>
+                <li><button onclick="filterGallery('arts')">Arts</button></li>
+            </ul>
+        </nav>
+        <div class="grid-container">
+            <div class='grid-item grid-item-1 photography'>
+                <a href="ARTS/PHOTOGRAPHY/photo1.jpg" target="_blank">
+                    <img class='grid-item grid-item-1' src="ARTS/PHOTOGRAPHY/photo1.jpg" alt="National Faith, 2025">
+                </a>
+                <p>National Faith, 2025</p>
+            </div>
+            <div class='grid-item grid-item-2 photography'>
+                <a href="ARTS/PHOTOGRAPHY/photo2.jpg" target="_blank">
+                    <img class='grid-item grid-item-2' src="ARTS/PHOTOGRAPHY/photo2.jpg" alt="Iyakin, 2024">
+                </a>
+                <p>Iyakin, 2024</p>
+            </div>
+            <div class='grid-item grid-item-3 photography'>
+                <a href="ARTS/PHOTOGRAPHY/photo3.jpg" target="_blank">
+                    <img class='grid-item grid-item-3' src="ARTS/PHOTOGRAPHY/photo3.jpg" alt="PLay on streets, 2024">
+                </a>
+                <p>PLay on streets, 2024</p>
+            </div>
+            <div class='grid-item grid-item-4 photography'>
+                <a href="ARTS/PHOTOGRAPHY/photo4.jpg" target="_blank">
+                    <img class='grid-item grid-item-4' src="ARTS/PHOTOGRAPHY/photo4.jpg" alt="Lower class, 2024">
+                </a>
+                <p>Lower class, 2024</p>
+            </div>
+            <div class='grid-item grid-item-5 photography'>
+                <a href="ARTS/PHOTOGRAPHY/photo5.jpg" target="_blank">
+                    <img class='grid-item grid-item-5' src="ARTS/PHOTOGRAPHY/photo5.jpg" alt="Leaves, 2025">
+                </a>
+                <p>Leaves, 2025</p>
+            </div>
+            <div class='grid-item grid-item-6 photography'>
+                <a href="ARTS/PHOTOGRAPHY/photo6.jpg" target="_blank">
+                    <img class='grid-item grid-item-6' src="ARTS/PHOTOGRAPHY/photo6.jpg" alt="Blue Velvet, 2025">
+                </a>
+                <p>Blue Velvet, 2025</p>
+            </div>
+            <div class='grid-item grid-item-7 photography'>
+                <a href="ARTS/PHOTOGRAPHY/photo7.jpg" target="_blank">
+                    <img class='grid-item grid-item-7' src="ARTS/PHOTOGRAPHY/photo7.jpg" alt="At the Prom Night, 2025">
+                </a>
+                <p>Is there really a light?, 2024</p>
+            </div>
+            <div class='grid-item grid-item-8 photography'>
+                <a href="ARTS/PHOTOGRAPHY/photo8.jpg" target="_blank">
+                    <img class='grid-item grid-item-8' src="ARTS/PHOTOGRAPHY/photo8.jpg" alt="At the Prom Night, 2025">
+                </a>
+                <p>Desolation, 2024</p>
+            </div>
+            <div class='grid-item grid-item-9 photography'>
+                <a href="ARTS/PHOTOGRAPHY/photo9.jpg" target="_blank">
+                    <img class='grid-item grid-item-9' src="ARTS/PHOTOGRAPHY/photo9.jpg" alt="Music for Hazy Airports, 2024">
+                </a>
+                <p>Music for Hazy Airports, 2024</p>
+            </div>
+            <div class='grid-item grid-item-10 photography'>
+                <a href="ARTS/PHOTOGRAPHY/photo10.jpg" target="_blank">
+                    <img class='grid-item grid-item-10' src="ARTS/PHOTOGRAPHY/photo10.jpg" alt="Music for Hazy Airports 2, 2024">
+                </a>
+                <p>Music for Hazy Airports 2, 2024</p>
+            </div>
+            <div class='grid-item grid-item-11 photography'>
+                <a href="ARTS/PHOTOGRAPHY/photo11.jpg" target="_blank">
+                    <img class='grid-item grid-item-11' src="ARTS/PHOTOGRAPHY/photo11.jpg" alt="Cat with a flower, 2025">
+                </a>
+                <p>Cat with a flower, 2025</p>
+            </div>
+            <div class='grid-item grid-item-12 photography'>
+                <a href="ARTS/PHOTOGRAPHY/photo12.jpg" target="_blank">
+                    <img class='grid-item grid-item-12' src="ARTS/PHOTOGRAPHY/photo12.jpg" alt="Sunny Day Real Blaze, 2025">
+                </a>
+                <p>Sunny Day Real Blaze, 2025</p>
+            </div>
+            <div class='grid-item grid-item-13 photography'>
+                <a href="ARTS/PHOTOGRAPHY/photo13.jpg" target="_blank">
+                    <img class='grid-item grid-item-13' src="ARTS/PHOTOGRAPHY/photo13.jpg" alt="Plastic-wrapped Man, 2025">
+                </a>
+                <p>Plastic-wrapped Man, 2025</p>
+            </div>
+            <div class='grid-item grid-item-1 arts'>
+                <a href="ARTS/DIGITAL ARTS/art1.png" target="_blank">
+                    <img class='grid-item grid-item-1' src="ARTS/DIGITAL ARTS/art1.png" alt="Melting waltz, 2024">
+                </a>
+                <p>Melting waltz, 2024</p>
+            </div>
+            <div class='grid-item grid-item-2 arts'>
+                <a href="ARTS/DIGITAL ARTS/art2.jpg" target="_blank">
+                    <img class='grid-item grid-item-2' src="ARTS/DIGITAL ARTS/art2.jpg" alt="Grieve in silence, 2025">
+                </a>
+                <p>Grieve in silence, 2025</p>
+            </div>
+            <div class='grid-item grid-item-3 arts'>
+                <a href="ARTS/DIGITAL ARTS/art3.jpg" target="_blank">
+                    <img class='grid-item grid-item-3' src="ARTS/DIGITAL ARTS/art3.jpg" alt="Burn Alone, 2025">
+                </a>
+                <p>Burn Alone, 2025</p>
+            </div>
+            <div class='grid-item grid-item-4 arts'>
+                <a href="ARTS/DIGITAL ARTS/art4.jpg" target="_blank">
+                    <img class='grid-item grid-item-4' src="ARTS/DIGITAL ARTS/art4.jpg" alt="Transmissions, 2025">
+                </a>
+                <p>Transmissions, 2025</p>
+            </div>
+            <div class='grid-item grid-item-5 arts'>
+                <a href="ARTS/DIGITAL ARTS/art5.jpg" target="_blank">
+                    <img class='grid-item grid-item-5' src="ARTS/DIGITAL ARTS/art5.jpg" alt="Demons, 2025">
+                </a>
+                <p>Demons, 2025</p>
+            </div>
+            <div class='grid-item grid-item-6 arts'>
+                <a href="ARTS/DIGITAL ARTS/art6.jpg" target="_blank">
+                    <img class='grid-item grid-item-6' src="ARTS/DIGITAL ARTS/art6.jpg" alt="Decentralized Madman, 2025">
+                </a>
+                <p>Decentralized Madman, 2025</p>
+            </div>
+            <div class='grid-item grid-item-7 arts'>
+                <a href="ARTS/DIGITAL ARTS/art7.jpg" target="_blank">
+                    <img class='grid-item grid-item-7' src="ARTS/DIGITAL ARTS/art7.jpg" alt="Eternal Lover, 2025">
+                </a>
+                <p>Eternal Lover, 2025</p>
+            </div>
+            <div class='grid-item grid-item-8 arts'>
+                <a href="ARTS/DIGITAL ARTS/art8.jpg" target="_blank">
+                    <img class='grid-item grid-item-8' src="ARTS/DIGITAL ARTS/art8.jpg" alt="Curse, 2025">
+                </a>
+                <p>Curse, 2025</p>
+            </div>
+            <div class='grid-item grid-item-9 arts'>
+                <a href="ARTS/DIGITAL ARTS/art9.jpg" target="_blank">
+                    <img class='grid-item grid-item-9' src="ARTS/DIGITAL ARTS/art9.jpg" alt="Sealed, 2024">
+                </a>
+                <p>Sealed, 2025</p>
+            </div>
+            <div class='grid-item grid-item-10 arts'>
+                <a href="ARTS/DIGITAL ARTS/art10.jpg" target="_blank">
+                    <img class='grid-item grid-item-10' src="ARTS/DIGITAL ARTS/art10.jpg" alt="A light, 2025">
+                </a>
+                <p>A light, 2025</p>
+            </div>
+        </div>
+    </body>
+</html>

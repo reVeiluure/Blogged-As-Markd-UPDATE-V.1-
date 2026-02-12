@@ -1,0 +1,136 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blogged as Mark'd | HOME</title>
+        <link rel="stylesheet" href="CSS/main_design.css">
+        <link rel="stylesheet" href="CSS/gallery.css">
+        <script>
+            function filterGallery(category) {
+                const buttons = document.querySelectorAll('.gallery-nav button');
+                const items = document.querySelectorAll('.grid-container > div');
+
+                buttons.forEach(btn => btn.classList.remove('active'));
+                event.target.classList.add('active');
+
+                items.forEach(item => {
+                    if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'inline-block';
+                    } else {
+                    item.style.display = 'none';
+                    }
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <header class="blog-header">
+            <div>
+                <nav class="nav-header">
+                    <input type="checkbox" id="menu-toggle">
+                    <label for="menu-toggle" class="hamburger">&#9776;</label>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#aboutme_dd">About Me</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="ABOUT ME/mateo_biography_csad.html" target="_self">Biography</a></li>
+                                </ul>
+                        <li class="dropdown">
+                            <a href="#blog_dd">Blog</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="BLOG STORIES/blogstory1.html" target="_self">Blog Part 1</a></li>
+                                    <li><a href="BLOG STORIES/blogstory2.html" target="_self">Blog Part 2</a></li>
+                                    <li><a href="BLOG STORIES/blogstory3.html" target="_self">Blog Part 3</a></li>
+                                </ul>
+                            </li>
+                        <li class="dropdown">
+                            <a href="#photo-gallery_dd">Photo Gallery</a>
+                                <ul class="dropdown-menu">
+                                    <li id="non-anchor">Myself</li>
+                                    <li><a href="gallery_arts.html" target="_self">My Arts</a></li>
+                                </ul>
+                        </li>
+                    </ul>
+                <h4 class="logo"><mark>Blogged as Mark'd</mark></h4>
+                </nav>
+            </div>
+        </header>
+        <nav class="gallery-nav">
+            <ul>
+                <li><button onclick="filterGallery('all')">All</button></li>
+                <li><button onclick="filterGallery('childhood')">Childhood</button></li>
+                <li><button onclick="filterGallery('teenage')">Teenage</button></li>
+                <li><button onclick="filterGallery('adult')">Adult</button></li>
+            </ul>
+        </nav>
+        <div class="grid-container">
+            <div class='grid-item grid-item-1 childhood'>
+                <a href="ABOUT ME/IMAGES/kidmark_1.jpg" target="_blank">
+                    <img class='grid-item grid-item-1' src="ABOUT ME/IMAGES/kidmark_1.jpg" alt="During a halloween party, 2010">
+                </a>
+                <p>During a halloween party, 2010</p>
+            </div>
+            <div class='grid-item grid-item-2 childhood'>
+                <a href="ABOUT ME/IMAGES/kidmark_2.jpg" target="_blank">
+                    <img class='grid-item grid-item-2' src="ABOUT ME/IMAGES/kidmark_2.jpg" alt="Fearmonger me, 2010">
+                </a>
+                <p>Fearmonger me, 2010</p>
+            </div>
+            <div class='grid-item grid-item-3 childhood'>
+                <a href="ABOUT ME/IMAGES/kidmark_3.jpg" target="_blank">
+                    <img class='grid-item grid-item-3' src="ABOUT ME/IMAGES/kidmark_3.jpg" alt="Carousel, 2010">
+                </a>
+                <p>Carousel, 2010</p>
+            </div>
+            <div class='grid-item grid-item-1 teenage'>
+                <a href="ABOUT ME/IMAGES/teenmark_1.jpg" target="_blank">
+                    <img class='grid-item grid-item-1' src="ABOUT ME/IMAGES/teenmark_1.jpg" alt="My 18th Birthday, 2023">
+                </a>
+                <p>My 18th Birthday, 2023</p>
+            </div>
+            <div class='grid-item grid-item-2 teenage'>
+                <a href="ABOUT ME/IMAGES/teenmark_2.jpg" target="_blank">
+                    <img class='grid-item grid-item-2' src="ABOUT ME/IMAGES/teenmark_2.jpg" alt="A selfie, 2023">
+                </a>
+                <p>A selfie, 2023</p>
+            </div>
+            <div class='grid-item grid-item-3 teenage'>
+                <a href="ABOUT ME/IMAGES/teenmark_3.jpeg" target="_blank">
+                    <img class='grid-item grid-item-3' src="ABOUT ME/IMAGES/teenmark_3.jpeg" alt="At the Prom Night, 2025">
+                </a>
+                <p>At the Prom Night, 2025</p>
+            </div>
+            <div class='grid-item grid-item-1 adult'>
+                <a href="ABOUT ME/IMAGES/collegemark_1.jpg" target="_blank">
+                    <img class='grid-item grid-item-1' src="ABOUT ME/IMAGES/collegemark_1.jpg" alt="During my first year of college, 2025">
+                </a>
+                <p>During my first year of college, 2025</p>
+            </div>
+            <div class='grid-item grid-item-2 adult'>
+                <a href="ABOUT ME/IMAGES/collegemark_2.jpg" target="_blank">
+                    <img class='grid-item grid-item-2' src="ABOUT ME/IMAGES/collegemark_2.jpg" alt="Tagaytay Starbucks, 2025">
+                </a>
+                <p>Tagaytay Starbucks, 2025</p>
+            </div>
+            <div class='grid-item grid-item-3 adult'>
+                <a href="ABOUT ME/IMAGES/collegemark_3.jpg" target="_blank">
+                    <img class='grid-item grid-item-3' src="ABOUT ME/IMAGES/collegemark_3.jpg" alt="Beach Camping, 2025">
+                </a>
+                <p>Beach Camping, 2025</p>
+            </div>
+            <div class='grid-item grid-item-4 adult'>
+                <a href="ABOUT ME/IMAGES/collegemark_4.jpg" target="_blank">
+                    <img class='grid-item grid-item-4' src="ABOUT ME/IMAGES/collegemark_4.jpg" alt="Self-Photoshoot, 2025">
+                </a>
+                <p>Self-Photoshoot, 2025</p>
+            </div>
+            <div class='grid-item grid-item-5 adult'>
+                <a href="ABOUT ME/IMAGES/collegemark_5.jpg" target="_blank">
+                    <img class='grid-item grid-item-5' src="ABOUT ME/IMAGES/collegemark_5.jpg" alt="Mirrorfie, 2026">
+                </a>
+                <p>Mirrorfie, 2026</p>
+            </div>
+        </div>
+    </body>
+</html>
