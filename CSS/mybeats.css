@@ -81,16 +81,16 @@ h3.artist-name {
     font-weight: bold;
     text-decoration: underline;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 .genre-list {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 .review {
     margin-top: auto;
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.95rem;
+    font-size: 1rem;
     border-top: 1px solid #000000;
     line-height: 1.4;
     padding-top: 15px;
