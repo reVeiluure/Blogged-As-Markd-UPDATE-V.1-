@@ -7,23 +7,6 @@
         <link rel="stylesheet" href="../CSS/gallery.css">
         <link rel="stylesheet" href="../CSS/icons.css">
         <link rel="stylesheet" href="../CSS/mybeats.css">
-        <script>
-            function filterGallery(category) {
-                const buttons = document.querySelectorAll('.gallery-nav button');
-                const items = document.querySelectorAll('.grid-container > div');
-
-                buttons.forEach(btn => btn.classList.remove('active'));
-                event.target.classList.add('active');
-
-                items.forEach(item => {
-                    if (category === 'all' || item.classList.contains(category)) {
-                    item.style.display = 'inline-block';
-                    } else {
-                    item.style.display = 'none';
-                    }
-                });
-            }
-        </script>
     </head>
     <body>
         <header class="blog-header">
@@ -61,9 +44,14 @@
         </main>
         <nav class="beats-nav">
             <ul>
-                <li><button onclick="filterGallery('all')">All</button></li>
-                <li><button onclick="filterGallery('photography')">Photography</button></li>
-                <li><button onclick="filterGallery('arts')">Arts</button></li>
+                <li><label for="all">All</label></li>
+                <li><label for="rock">Rock</label></li>
+                <li><label for="industrial">Industrial</label></li>
+                <li><label for="punk">Punk</label></li>
+                <li><label for="pop">Pop</label></li>
+                <li><label for="jazz">Jazz</label></li>
+                <li><label for="ambient">Ambient</label></li>
+                <li><label for="electronic">Electronic</label></li>
             </ul>
         </nav>
         <section class="music-container">
@@ -100,6 +88,66 @@
                     <div class="genre-list">
                         <b>Genres</b>: Art Punk, Post-Punk Experimental Rock, Punk, Noise Rock, Avant-Prog, Post-Hardcore <br>
                         <b>Scene</b>: No Wave 
+                    </div>
+                    <div class="review">
+                        <h1>ReverieVeil's Review</h1>
+                        <p>
+                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
+                        </p>
+                    </div>
+                </aside>
+            </div>
+            <div class="music-card">
+                <div class="music-visual">
+                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2580708913/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="https://amygdalatx.bandcamp.com/album/population-control-2">
+                        Population Control by Amygdala</a></iframe>
+                    </iframe>
+                </div>
+                <aside class="music-card-items">
+                    <h2 class="album-title">Population Control</h2>
+                    <h3 class="artist-name">Amygdala</h3>
+                    <div class="genre-list">
+                        <b>Genres</b>: Emoviolence
+                    </div>
+                    <div class="review">
+                        <h1>ReverieVeil's Review</h1>
+                        <p>
+                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
+                        </p>
+                    </div>
+                </aside>
+            </div>
+            <div class="music-card">
+                <div class="music-visual">
+                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=951012245/size=large/bgcol=333333/linkcol=e99708/tracklist=false/transparent=true/" seamless><a href="https://perctrax.bandcamp.com/album/hounds-of-the-harbour">
+                        Hounds Of The Harbour by Ansome</a></iframe>
+                    </iframe>
+                </div>
+                <aside class="music-card-items">
+                    <h2 class="album-title">Hounds Of The Harbour</h2>
+                    <h3 class="artist-name">Ansome</h3>
+                    <div class="genre-list">
+                        <b>Genres</b>: Industrial Techno, Power Noise, Electro-Industrial
+                    </div>
+                    <div class="review">
+                        <h1>ReverieVeil's Review</h1>
+                        <p>
+                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
+                        </p>
+                    </div>
+                </aside>
+            </div>
+            <div class="music-card">
+                <div class="music-visual">
+                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2688218030/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="https://wearebusybodies.bandcamp.com/album/newfound-interest-in-connecticut-tell-me-about-the-long-dark-path-home">
+                        Newfound Interest in Connecticut - Tell Me About The Long Dark Path Home by We Are Busy Bodies</a></iframe>
+                    </iframe>
+                </div>
+                <aside class="music-card-items">
+                    <h2 class="album-title">Tell Me About The Long Dark Path Home by We Are Busy Bodies</h2>
+                    <h3 class="artist-name">Newfound Interest in Connecticut</h3>
+                    <div class="genre-list">
+                        <b>Genres</b>: Post-Rock, Midwest Emo, Math Rock, Post-Hardcore, Field Recordings
                     </div>
                     <div class="review">
                         <h1>ReverieVeil's Review</h1>
