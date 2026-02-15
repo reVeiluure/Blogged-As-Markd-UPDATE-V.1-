@@ -98,11 +98,21 @@
     line-height: 1.6;
     text-indent: 0;
 }
+.blog-card > img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border: 2px solid black;
+    filter: grayscale(100%);
+}
 .blog-card:hover {
     background-color: black;
     color: white;
     box-shadow: 12px 12px 0 white;
-    transform: translateY(-3px);
+    transform: translateY(-3px) rotate(-2deg);
+}
+.blog-card:hover > img {
+    filter: grayscale(0%);
 }
 .blog-card:hover h3, .blog-card:hover h3 > a, .blog-card:hover p {
     color: white;
@@ -118,4 +128,8 @@
     border: 2px solid black;
     display: block;
     box-shadow: 12px 12px 0 black;
+}
+.description:hover {
+    transform: rotate(-2deg);
+    transition: transform .25s ease
 }

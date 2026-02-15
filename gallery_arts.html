@@ -5,23 +5,76 @@
         <title>Blogged as Mark'd | PHOTO GALLERY | ARTS</title>
         <link rel="stylesheet" href="CSS/main_design.css">
         <link rel="stylesheet" href="CSS/gallery.css">
-        <script>
-            function filterGallery(category) {
-                const buttons = document.querySelectorAll('.gallery-nav button');
-                const items = document.querySelectorAll('.grid-container > div');
-
-                buttons.forEach(btn => btn.classList.remove('active'));
-                event.target.classList.add('active');
-
-                items.forEach(item => {
-                    if (category === 'all' || item.classList.contains(category)) {
-                    item.style.display = 'inline-block';
-                    } else {
-                    item.style.display = 'none';
-                    }
-                });
+        <style>
+            .filter-input {
+                display: none !important;
             }
-        </script>
+            #photography:checked ~ .grid-container > .grid-item,
+            #arts:checked ~ .grid-container > .grid-item {
+                display: none;
+            }
+            #all:checked ~ .grid-container > .grid-item,
+            #photography:checked ~ .grid-container > .photography,
+            #arts:checked ~ .grid-container > .arts {
+                display: block !important;
+            }
+            #all:checked ~ .gallery-nav label[for="all"],
+            #photography:checked ~ .gallery-nav label[for="photography"],
+            #arts:checked ~ .gallery-nav label[for="arts"] {
+                background-color: black;
+                color: white;
+            }
+            .gallery-nav ul {
+                list-style: none;
+                display: flex;
+                padding: 0;
+                font-family: 'Bebas Neue', sans-serif;
+            }
+            .gallery-nav label {
+                padding: 8px 16px;
+                cursor: pointer;
+                display: block;
+                border-bottom: 3px solid black;
+                transition: all 0.5s ease;
+            }
+            .gallery-nav label:hover {
+                background-color: yellow;
+                text-decoration: underline;
+            }
+            .grid-container {
+                column-count: 5;         
+                column-gap: 1.5rem;
+                width: 100%;
+                padding: 0 2rem;     
+                box-sizing: border-box;  
+            }
+            .grid-container div {
+                break-inside: avoid;
+                margin-bottom: 1.5rem;
+                width: 100%;
+                border: solid 2px black;
+                padding: 5px;
+                transition: all .25s ease-in-out;
+            }
+            .grid-container div img {
+                width: 100%;
+                display: block;
+                filter: grayscale(100%);
+                transition: all .25s ease-in-out;
+            }
+            .grid-container div:hover { 
+                border-color: coral;
+            }
+            .grid-container div:hover img { 
+                filter: grayscale(0); 
+            }
+            body {
+                margin: 0;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+        </style>
     </head>
     <body>
         <header class="blog-header">
@@ -55,13 +108,21 @@
                 </nav>
             </div>
         </header>
-        <h1 class="title-page">PHOTO GALLERY</h1>
-        <h2><b><a href="gallery_self.html">MYSELF</a></b><b id="non-anchor">ARTS</b></h2>
+        <input type="radio" name="gallery-filter" id="all" class="filter-input" checked>
+        <input type="radio" name="gallery-filter" id="photography" class="filter-input">
+        <input type="radio" name="gallery-filter" id="arts" class="filter-input">
+        <main class="photo-gallery">
+            <h1 class="title-page">PHOTO GALLERY</h1>
+            <div class="gallery-labels-container">
+                <h2><a href="gallery_self.html" class="gallery-category-label">Me</a>
+                <a class="gallery-category-label active">Arts</a></h2>
+            </div>
+        </main>
         <nav class="gallery-nav">
             <ul>
-                <li><button onclick="filterGallery('all')">All</button></li>
-                <li><button onclick="filterGallery('photography')">Photography</button></li>
-                <li><button onclick="filterGallery('arts')">Arts</button></li>
+                <li><label for="all">All</label></li>
+                <li><label for="photography">Photography</label></li>
+                <li><label for="arts">Arts</label></li>
             </ul>
         </nav>
         <div class="grid-container">

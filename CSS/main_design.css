@@ -177,7 +177,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    min-width: 200px;
+    min-width: 170px;
     display: none;
     z-index: 555;
 }
@@ -231,16 +231,87 @@ header h4 mark {
 .nav-header {
     background-color: white;
     border-bottom: 2px solid black;
-    padding: 20px 50px;
+    color: black;
+    padding: 20px 20px;
     display: flex;
     align-items: center;
+    text-align: center;
     gap: 20px; 
     justify-content: space-between;
+}
+main.intro-main-page {
+    box-sizing: border-box; 
+    height: 100vh;
+    width: 100vw;
+    margin: 0 0 0 0;
+    padding: 60px;
+    background-color: white;
+    border-bottom: 10px solid black;
+    background-image: radial-gradient(black 1px, transparent 0);
+    background-size: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    .intro-main-page {
+    overflow: visible;
+}
+}
+#intro-bio {
+    border-left: 15px solid black;
+    padding-left: 30px;
+}
+.nav-main {
+    display: inline-block; 
+    margin: 70px auto; 
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    padding: 15px 30px;
+    border: 4px solid black;
+    box-shadow: 10px 10px 0px black;
+    font-family: 'Bebas Neue', sans-serif;
+    z-index: 1000;
+}
+.nav-main ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.nav-main a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.nav-main a:hover {
+    background: black;
+    color: white;
+}
+mark.intro-highlight {
+    background-color: black;
+    color: white;
+    padding: 0 10px;
 }
 h1.title-page {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 72px;
-    letter-spacing: 1rem;
+    letter-spacing: 0.5rem;
+    max-width: 80%;
+}
+h2.title-page {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    background: white;
+    border: 3px solid black;
+    display: inline-block;
+    padding: 10px 20px;
+    transform: rotate(-2deg);
 }
 h2 > b > a {
     color: black;
@@ -248,7 +319,7 @@ h2 > b > a {
     align-items: center;
     text-align: center;
     display: flex;
-    border: 2px solid black
+    border: 2px solid black;
 }
 h2 > b > a:hover {
     text-decoration: underline;
@@ -306,6 +377,7 @@ nav ul li a:active {
     display: block;
     padding: 0.5px 16px;
     text-decoration: none;
+    text-align: center;
 }
 #blackwallpaper {
     background-image: url('../BLOG STORIES/IMAGES/blackwallpaper_1.jpg');
@@ -392,8 +464,12 @@ mark.hov:hover  {
     color: white;
 }
 .wrapper {
-    max-width: 850px;
+    max-width: 900px;
+    width: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     border-left: 2px solid #3E122B;
     border-right: 2px solid #3E122B;
     padding: 40px;
@@ -567,17 +643,16 @@ h2 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 32px;
 }
-main {
-    margin: 0 5rem;
-}
 body {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 0;
+    padding: 0;
     padding-top: 200px;
+    background-color: white; 
+    width: 100%;
 }
 body.home {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 0;
+    padding: 0;
     padding-top: 50px;
 }
 h4 {

@@ -5,23 +5,79 @@
         <title>Blogged as Mark'd | PHOTO GALLERY | SELF</title>
         <link rel="stylesheet" href="CSS/main_design.css">
         <link rel="stylesheet" href="CSS/gallery.css">
-        <script>
-            function filterGallery(category) {
-                const buttons = document.querySelectorAll('.gallery-nav button');
-                const items = document.querySelectorAll('.grid-container > div');
-
-                buttons.forEach(btn => btn.classList.remove('active'));
-                event.target.classList.add('active');
-
-                items.forEach(item => {
-                    if (category === 'all' || item.classList.contains(category)) {
-                    item.style.display = 'inline-block';
-                    } else {
-                    item.style.display = 'none';
-                    }
-                });
+        <style>
+            .filter-input {
+                display: none !important;
             }
-        </script>
+                #childhood:checked ~ .grid-container > .grid-item,
+            #teenage:checked ~ .grid-container > .grid-item,
+            #adult:checked ~ .grid-container > .grid-item {
+                display: none;
+            }
+            #all:checked ~ .grid-container > .grid-item,
+            #childhood:checked ~ .grid-container > .childhood,
+            #teenage:checked ~ .grid-container > .teenage,
+            #adult:checked ~ .grid-container > .adult {
+                display: block !important;
+            }
+            #all:checked ~ .gallery-nav label[for="all"],
+            #childhood:checked ~ .gallery-nav label[for="childhood"],
+            #teenage:checked ~ .gallery-nav label[for="teenage"],
+            #adult:checked ~ .gallery-nav label[for="adult"] {
+                background-color: black;
+                color: white;
+            }
+            .gallery-nav ul {
+                list-style: none;
+                display: flex;
+                padding: 0;
+                font-family: 'Bebas Neue', sans-serif;
+            }
+            .gallery-nav label {
+                padding: 8px 16px;
+                cursor: pointer;
+                display: block;
+                border-bottom: 3px solid black;
+                transition: all 0.5s ease;
+            }
+            .gallery-nav label:hover {
+                background-color: yellow;
+                text-decoration: underline;
+            }
+            .grid-container {
+                column-count: 5;         
+                column-gap: 1.5rem;
+                width: 100%;
+                padding: 0 2rem;     
+                box-sizing: border-box;  
+            }
+            .grid-container div {
+                break-inside: avoid;
+                margin-bottom: 1.5rem;
+                width: 100%;
+                border: solid 2px black;
+                padding: 5px;
+                transition: all .25s ease-in-out;
+            }
+            .grid-container div img {
+                width: 100%;
+                display: block;
+                filter: grayscale(100%);
+                transition: all .25s ease-in-out;
+            }
+            .grid-container div:hover { 
+                border-color: coral;
+            }
+            .grid-container div:hover img { 
+                filter: grayscale(0); 
+            }
+            body {
+                margin: 0;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+        </style>
     </head>
     <body>
         <header class="blog-header">
@@ -54,14 +110,23 @@
                 </nav>
             </div>
         </header>
-        <h1 class="title-page">PHOTO GALLERY</h1>
-        <h2><b id="non-anchor">MYSELF</b><b><a href="gallery_arts.html">ARTS</a></b></h2>
+        <input type="radio" name="gallery-filter" id="all" class="filter-input" checked>
+        <input type="radio" name="gallery-filter" id="childhood" class="filter-input">
+        <input type="radio" name="gallery-filter" id="teenage" class="filter-input">
+        <input type="radio" name="gallery-filter" id="adult" class="filter-input">
+        <main class="photo-gallery">
+            <h1 class="title-page"><mark style="background-color: black; color: white;">PHOTO GALLERY</mark></h1>
+            <div class="gallery-labels-container">
+                <h2><a class="gallery-category-label active">Me</a>
+                <a href="gallery_arts.html" class="gallery-category-label">Arts</a></h2>
+            </div>
+        </main>
         <nav class="gallery-nav">
             <ul>
-                <li><button onclick="filterGallery('all')">All</button></li>
-                <li><button onclick="filterGallery('childhood')">Childhood</button></li>
-                <li><button onclick="filterGallery('teenage')">Teenage</button></li>
-                <li><button onclick="filterGallery('adult')">Adult</button></li>
+                <li><label for="all">All</label></li>
+                <li><label for="childhood">Childhood</label></li>
+                <li><label for="teenage">Teenage</label></li>
+                <li><label for="adult">Adult</label></li>
             </ul>
         </nav>
         <div class="grid-container">

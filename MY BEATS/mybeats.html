@@ -1,0 +1,114 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blogged as Mark'd | PHOTO GALLERY | SELF</title>
+        <link rel="stylesheet" href="../CSS/main_design.css">
+        <link rel="stylesheet" href="../CSS/gallery.css">
+        <link rel="stylesheet" href="../CSS/icons.css">
+        <link rel="stylesheet" href="../CSS/mybeats.css">
+        <script>
+            function filterGallery(category) {
+                const buttons = document.querySelectorAll('.gallery-nav button');
+                const items = document.querySelectorAll('.grid-container > div');
+
+                buttons.forEach(btn => btn.classList.remove('active'));
+                event.target.classList.add('active');
+
+                items.forEach(item => {
+                    if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'inline-block';
+                    } else {
+                    item.style.display = 'none';
+                    }
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <header class="blog-header">
+            <div>
+                <nav class="nav-header">
+                    <h4><mark>Blogged as Mark'd</mark></h4>
+                    <ul class="nav-menu">
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#aboutme_dd">About Me</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../ABOUT ME/mateo_biography_csad.html" target="_self">Biography</a></li>
+                                </ul>
+                        <li class="dropdown">
+                            <a href="#blog_dd">Blog</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../BLOG STORIES/blogstory1.html" target="_self">Blog Part 1</a></li>
+                                    <li><a href="../BLOG STORIES/blogstory2.html" target="_self">Blog Part 2</a></li>
+                                    <li><a href="../BLOG STORIES/blogstory3.html" target="_self">Blog Part 3</a></li>
+                                </ul>
+                            </li>
+                        <li class="dropdown">
+                            <a href="#photo-gallery_dd">Photo Gallery</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../gallery_self.html" target="_self">Myself</a></li>
+                                    <li><a href="../gallery_arts.html" target="_self">My Arts</a></li>
+                                </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="beats-page">
+            <h1 class="title-page">MY BEATS</h1>
+        </main>
+        <nav class="beats-nav">
+            <ul>
+                <li><button onclick="filterGallery('all')">All</button></li>
+                <li><button onclick="filterGallery('photography')">Photography</button></li>
+                <li><button onclick="filterGallery('arts')">Arts</button></li>
+            </ul>
+        </nav>
+        <section class="music-container">
+            <div class="music-card">
+                <div class="music-visual">
+                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=1444050178/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/transparent=true/" seamless>
+                        <a href="https://slint.bandcamp.com/album/spiderland-remastered">Spiderland (remastered) by Slint</a></iframe>
+                    </iframe>
+                </div>
+                <aside class="music-card-items">
+                    <h2 class="album-title">Spiderland</h2>
+                    <h3 class="artist-name">Slint</h3>
+                    <div class="genre-list">
+                        <b>Genres</b>: Post-Rock, Post-Hardcore, Math Rock, Spoken Word, Experimental Rock, Slowcore, Emo, Noise Rock <br>
+                        <b>Scene</b>: Louisville Post-Rock 
+                    </div>
+                    <div class="review">
+                        <h1>ReverieVeil's Review</h1>
+                        <p>
+                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
+                        </p>
+                    </div>
+                </aside>
+            </div>
+            <div class="music-card">
+                <div class="music-visual">
+                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=3903178897/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="https://dogfacedhermans.bandcamp.com/album/hum-of-life-remastered-2009">
+                        Hum Of Life (Remastered 2009) by Dog Faced Hermans</a></iframe>
+                    </iframe>
+                </div>
+                <aside class="music-card-items">
+                    <h2 class="album-title">Hum Of Life</h2>
+                    <h3 class="artist-name">Dog Faced Hermans</h3>
+                    <div class="genre-list">
+                        <b>Genres</b>: Art Punk, Post-Punk Experimental Rock, Punk, Noise Rock, Avant-Prog, Post-Hardcore <br>
+                        <b>Scene</b>: No Wave 
+                    </div>
+                    <div class="review">
+                        <h1>ReverieVeil's Review</h1>
+                        <p>
+                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
+                        </p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </body>
+</html>
