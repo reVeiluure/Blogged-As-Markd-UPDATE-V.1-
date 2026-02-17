@@ -31,7 +31,8 @@
 #romance:checked ~ .film-container .film-card,
 #family:checked ~ .film-container .film-card,
 #sci-fi:checked ~ .film-container .film-card,
-#coa:checked ~ .film-container .film-card {
+#coa:checked ~ .film-container .film-card,
+#sof:checked ~ .film-container .film-card {
     display: none;
 }
 #all:checked ~ .film-container .film-card,
@@ -52,7 +53,8 @@
 #romance:checked ~ .film-container .romance,
 #family:checked ~ .film-container .family,
 #sci-fi:checked ~ .film-container .sci-fi,
-#coa:checked ~ .film-container .coa {
+#coa:checked ~ .film-container .coa,
+#sof:checked ~ .film-container .sof {
     display: flex !important;
 }
 #all:checked ~ .film-nav label[for="all"],
@@ -73,7 +75,8 @@
 #romance:checked ~ .film-nav label[for="romance"],
 #family:checked ~ .film-nav label[for="family"],
 #sci-fi:checked ~ .film-nav label[for="sci-fi"],
-#coa:checked ~ .film-nav label[for="coa"] {
+#coa:checked ~ .film-nav label[for="coa"],
+#sof:checked ~ .film-nav label[for="sof"] {
     background: #000;
     color: #fff;
     text-decoration: line-through;
