@@ -7,81 +7,8 @@
         <link rel="stylesheet" href="../CSS/gallery.css">
         <link rel="stylesheet" href="../CSS/icons.css">
         <link rel="stylesheet" href="../CSS/mybeats.css">
-        <style>
-            .filter-input {
-                display: none !important;
-            }
-                #childhood:checked ~ .grid-container > .grid-item,
-            #teenage:checked ~ .grid-container > .grid-item,
-            #adult:checked ~ .grid-container > .grid-item {
-                display: none;
-            }
-            #all:checked ~ .grid-container > .grid-item,
-            #childhood:checked ~ .grid-container > .childhood,
-            #teenage:checked ~ .grid-container > .teenage,
-            #adult:checked ~ .grid-container > .adult {
-                display: block !important;
-            }
-            #all:checked ~ .gallery-nav label[for="all"],
-            #childhood:checked ~ .gallery-nav label[for="childhood"],
-            #teenage:checked ~ .gallery-nav label[for="teenage"],
-            #adult:checked ~ .gallery-nav label[for="adult"] {
-                background-color: black;
-                color: white;
-            }
-            .beats-nav ul {
-                list-style: none;
-                display: flex;
-                padding: 0;
-                font-family: 'Bebas Neue', sans-serif;
-            }
-            .beats-nav label {
-                padding: 8px 16px;
-                cursor: pointer;
-                display: block;
-                border-bottom: 3px solid black;
-                transition: all 0.5s ease;
-            }
-            .beats-nav label:hover {
-                background-color: yellow;
-                text-decoration: underline;
-            }
-            .grid-container {
-                column-count: 5;         
-                column-gap: 1.5rem;
-                width: 100%;
-                padding: 0 2rem;     
-                box-sizing: border-box;  
-            }
-            .grid-container div {
-                break-inside: avoid;
-                margin-bottom: 1.5rem;
-                width: 100%;
-                border: solid 2px black;
-                padding: 5px;
-                transition: all .25s ease-in-out;
-            }
-            .grid-container div img {
-                width: 100%;
-                display: block;
-                filter: grayscale(100%);
-                transition: all .25s ease-in-out;
-            }
-            .grid-container div:hover { 
-                border-color: coral;
-            }
-            .grid-container div:hover img { 
-                filter: grayscale(0); 
-            }
-            body {
-                margin: 0;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-            }
-        </style>
     </head>
-    <body>
+    <body class="page">
         <header class="blog-header">
             <div>
                 <nav class="nav-header">
@@ -113,424 +40,829 @@
             </div>
         </header>
         <main class="beats-page">
-            <h1 class="title-page">MY BEATS</h1>
+            <div class="beats-hero-card">
+                <h1 class="title-page">MY BEATS</h1>
+                <div class="profile-section">
+                    <h2>MY MUSIC PROFILES:</h2>
+                    <div class="links-icon">
+                        <a href="https://www.last.fm/user/AkiraAndrew" target="_blank">
+                            <img src="../ICONS/lastfm.png" alt="LastFM" class="icon-small">
+                        </a>
+                        <a href="https://soundcloud.com/mark-andrew-mateo" target="_blank">
+                            <img src="../ICONS/icons8-soundcloud-120.png" alt="Soundcloud" class="icon-small">
+                        </a>
+                        <a href="https://rateyourmusic.com/~Xstralinxt1300" target="_blank">
+                            <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic" class="icon-small">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </main>
-        <input type="radio" name="music-filter" id="all" class="filter-input" checked>
-        <input type="radio" name="music-filter" id="rock" class="filter-input">
-        <input type="radio" name="music-filter" id="industrial" class="filter-input">
-        <input type="radio" name="music-filter" id="punk" class="filter-input">
-        <input type="radio" name="music-filter" id="pop" class="filter-input">
-        <input type="radio" name="music-filter" id="jazz" class="filter-input">
-        <input type="radio" name="music-filter" id="folk" class="filter-input">
-        <input type="radio" name="music-filter" id="singer-songwriter" class="filter-input">
-        <input type="radio" name="music-filter" id="classical" class="filter-input">
-        <input type="radio" name="music-filter" id="hip-hop" class="filter-input">
-        <input type="radio" name="music-filter" id="rnb" class="filter-input">
-        <input type="radio" name="music-filter" id="psychedelia" class="filter-input">
-        <input type="radio" name="music-filter" id="electronic" class="filter-input">
-        <nav class="beats-nav">
-            <ul>
-                <li><label for="all">All</label></li>
-                <li><label for="rock">Rock</label></li>
-                <li><label for="industrial">Industrial</label></li>
-                <li><label for="punk">Punk</label></li>
-                <li><label for="pop">Pop</label></li>
-                <li><label for="jazz">Jazz</label></li>
-                <li><label for="folk">Folk</label></li>
-                <li><label for="singer-songwriter">Singer-Songwriter</label></li>
-                <li><label for="classical">Classical</label></li>
-                <li><label for="hip-hop">Hip-Hop</label></li>
-                <li><label for="rnb">R&B</label></li>
-                <li><label for="psychedelia">Psychedelia</label></li>
-                <li><label for="electronic">Electronic</label></li>
-            </ul>
-        </nav>
-        <section class="music-container">
-            <div class="music-card">
-                <div class="music-visual">
-                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=1444050178/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/transparent=true/" seamless>
-                        <a href="https://slint.bandcamp.com/album/spiderland-remastered">Spiderland (remastered) by Slint</a>
-                    </iframe>
+        <div class="main-content-wrapper">
+            <input type="radio" name="music-filter" id="rock" class="filter-input">
+            <input type="radio" name="music-filter" id="metal" class="filter-input">
+            <input type="radio" name="music-filter" id="industrial" class="filter-input">
+            <input type="radio" name="music-filter" id="experimental" class="filter-input">
+            <input type="radio" name="music-filter" id="ambient" class="filter-input">
+            <input type="radio" name="music-filter" id="punk" class="filter-input">
+            <input type="radio" name="music-filter" id="pop" class="filter-input">
+            <input type="radio" name="music-filter" id="jazz" class="filter-input">
+            <input type="radio" name="music-filter" id="folk" class="filter-input">
+            <input type="radio" name="music-filter" id="world" class="filter-input">
+            <input type="radio" name="music-filter" id="singer-songwriter" class="filter-input">
+            <input type="radio" name="music-filter" id="classical" class="filter-input">
+            <input type="radio" name="music-filter" id="hip-hop" class="filter-input">
+            <input type="radio" name="music-filter" id="rnb" class="filter-input">
+            <input type="radio" name="music-filter" id="psychedelia" class="filter-input">
+            <input type="radio" name="music-filter" id="electronic" class="filter-input">
+
+            <input type="radio" name="music-filter" id="all" class="filter-input" checked>
+            <input type="checkbox" id="menu-toggle" class="filter-input">
+            <nav class="beats-nav">
+                <label for="menu-toggle" class="menu-button">FILTER BY GENRE ▾</label>
+                <ul class="genre-list-container">
+                    <li><label for="all">All</label></li>
+                    <li><label for="rock">Rock</label></li>
+                    <li><label for="industrial">Industrial</label></li>
+                    <li><label for="experimental">Experimental</label></li>
+                    <li><label for="ambient">Ambient</label></li>
+                    <li><label for="punk">Punk</label></li>
+                    <li><label for="pop">Pop</label></li>
+                    <li><label for="jazz">Jazz</label></li>
+                    <li><label for="folk">Folk</label></li>
+                    <li><label for="world">World Music</label></li>
+                    <li><label for="singer-songwriter">Singer-Songwriter</label></li>
+                    <li><label for="classical">Classical</label></li>
+                    <li><label for="hip-hop">Hip-Hop</label></li>
+                    <li><label for="rnb">R&B</label></li>
+                    <li><label for="metal">Metal</label></li>
+                    <li><label for="psychedelia">Psychedelia</label></li>
+                    <li><label for="electronic">Electronic</label></li>
+                </ul>
+            </nav>
+            <section class="music-container">
+                <div class="music-card rock">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=1444050178/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/transparent=true/" seamless>
+                            <a href="https://slint.bandcamp.com/album/spiderland-remastered">Spiderland (remastered) by Slint</a>
+                        </iframe>
+                    </div>
+                    <aside class="music-card-items">
+                        <h2 class="album-title">Spiderland</h2>
+                        <h3 class="artist-name">Slint</h3>
+                        <div class="genre-list">
+                            <b>Type</b>: Album <br><br>
+                            <b>Released</b>: 27 March 1991 <br><br>
+                            <b>Recorded</b>: August-October 1990 <br><br>
+                            <b>Genres</b>: Post-Rock, Post-Hardcore, Math Rock, Spoken Word, Experimental Rock, Slowcore, Emo, Noise Rock <br><br>
+                            <b>Scene</b>: Louisville Post-Rock <br><br>
+                            <b>Language</b>: English <br>
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921" target="_blank">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU" target="_blank">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="sources">
+                            <h1>Credits</h1>
+                            <b>David Pajo</b> <br>
+                            guitar <br><br>
+                            <b>Brian Paulson</b> <br>
+                            recording engineer <br><br>
+                            <b>Will Oldham</b> <br>
+                            cover photography <br><br>
+                            <b>Noel Saltzman</b> <br>
+                            photography <br><br>
+                            <b>Todd Brashear</b> <br>
+                            bass guitar <br><br>
+                            <b>Brian McMahan</b> <br>
+                            guitar, vocals <br><br>
+                            <b>Britt Walford</b> <br>
+                            drums, guitar, songwriter, vocals <br><br>
+                            <b>Slint</b> <br>
+                            songwriting
+                        </div>
+                    </aside>
                 </div>
-                <aside class="music-card-items">
-                    <h2 class="album-title">Spiderland</h2>
-                    <h3 class="artist-name">Slint</h3>
-                    <div class="genre-list">
-                        <b>Genres</b>: Post-Rock, Post-Hardcore, Math Rock, Spoken Word, Experimental Rock, Slowcore, Emo, Noise Rock <br>
-                        <b>Scene</b>: Louisville Post-Rock 
+                <div class="music-card rock punk">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=3903178897/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="https://dogfacedhermans.bandcamp.com/album/hum-of-life-remastered-2009">
+                            Hum Of Life (Remastered 2009) by Dog Faced Hermans</a>
+                        </iframe>
                     </div>
-                    <div class="review">
-                        <h1>ReverieVeil's Review</h1>
-                        <p>
-                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
-                        </p>
-                    </div>
-                </aside>
-            </div>
-            <div class="music-card">
-                <div class="music-visual">
-                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=3903178897/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="https://dogfacedhermans.bandcamp.com/album/hum-of-life-remastered-2009">
-                        Hum Of Life (Remastered 2009) by Dog Faced Hermans</a>
-                    </iframe>
+                    <aside class="music-card-items">
+                        <h2 class="album-title">Hum Of Life</h2>
+                        <h3 class="artist-name">Dog Faced Hermans</h3>
+                        <div class="genre-list">
+                            <b>Type</b>: Album <br><br>
+                            <b>Released</b>: 13 July 1993 <br><br>
+                            <b>Recorded</b>: January 1993 <br><br>
+                            <b>Genres</b>: Art Punk, Post-Punk Experimental Rock, Punk, Noise Rock, Avant-Prog, Post-Hardcore <br><br>
+                            <b>Scene</b>: No Wave <br><br>
+                            <b>Language</b>: English
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/dog-faced-hermans/hum-of-life/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/hum-of-life/1612689924" target="_blank">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/11f0wJ7lvwgwSKzxao3tdp" target="_blank">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
-                <aside class="music-card-items">
-                    <h2 class="album-title">Hum Of Life</h2>
-                    <h3 class="artist-name">Dog Faced Hermans</h3>
-                    <div class="genre-list">
-                        <b>Genres</b>: Art Punk, Post-Punk Experimental Rock, Punk, Noise Rock, Avant-Prog, Post-Hardcore <br>
-                        <b>Scene</b>: No Wave 
+                <div class="music-card punk rock">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2580708913/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="https://amygdalatx.bandcamp.com/album/population-control-2">
+                            Population Control by Amygdala</a>
+                        </iframe>
                     </div>
-                    <div class="review">
-                        <h1>ReverieVeil's Review</h1>
-                        <p>
-                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
-                        </p>
-                    </div>
-                </aside>
-            </div>
-            <div class="music-card">
-                <div class="music-visual">
-                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2580708913/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="https://amygdalatx.bandcamp.com/album/population-control-2">
-                        Population Control by Amygdala</a>
-                    </iframe>
+                    <aside class="music-card-items">
+                        <h2 class="album-title">Population Control</h2>
+                        <h3 class="artist-name">Amygdala</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: Emoviolence
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
-                <aside class="music-card-items">
-                    <h2 class="album-title">Population Control</h2>
-                    <h3 class="artist-name">Amygdala</h3>
-                    <div class="genre-list">
-                        <b>Genres</b>: Emoviolence
+                <div class="music-card industrial electronic">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=951012245/size=large/bgcol=333333/linkcol=e99708/tracklist=false/transparent=true/" seamless><a href="https://perctrax.bandcamp.com/album/hounds-of-the-harbour">
+                            Hounds Of The Harbour by Ansome</a>
+                        </iframe>
                     </div>
-                    <div class="review">
-                        <h1>ReverieVeil's Review</h1>
-                        <p>
-                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
-                        </p>
-                    </div>
-                </aside>
-            </div>
-            <div class="music-card">
-                <div class="music-visual">
-                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=951012245/size=large/bgcol=333333/linkcol=e99708/tracklist=false/transparent=true/" seamless><a href="https://perctrax.bandcamp.com/album/hounds-of-the-harbour">
-                        Hounds Of The Harbour by Ansome</a>
-                    </iframe>
+                    <aside class="music-card-items">
+                        <h2 class="album-title">Hounds Of The Harbour</h2>
+                        <h3 class="artist-name">Ansome</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: Industrial Techno, Power Noise, Electro-Industrial
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
-                <aside class="music-card-items">
-                    <h2 class="album-title">Hounds Of The Harbour</h2>
-                    <h3 class="artist-name">Ansome</h3>
-                    <div class="genre-list">
-                        <b>Genres</b>: Industrial Techno, Power Noise, Electro-Industrial
+                <div class="music-card punk rock">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2688218030/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="https://wearebusybodies.bandcamp.com/album/newfound-interest-in-connecticut-tell-me-about-the-long-dark-path-home">
+                            Newfound Interest in Connecticut - Tell Me About The Long Dark Path Home by We Are Busy Bodies</a>
+                        </iframe>
                     </div>
-                    <div class="review">
-                        <h1>ReverieVeil's Review</h1>
-                        <p>
-                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
-                        </p>
-                    </div>
-                </aside>
-            </div>
-            <div class="music-card">
-                <div class="music-visual">
-                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2688218030/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="https://wearebusybodies.bandcamp.com/album/newfound-interest-in-connecticut-tell-me-about-the-long-dark-path-home">
-                        Newfound Interest in Connecticut - Tell Me About The Long Dark Path Home by We Are Busy Bodies</a>
-                    </iframe>
+                    <aside class="music-card-items">
+                        <h2 class="album-title">Tell Me About The Long Dark Path Home by We Are Busy Bodies</h2>
+                        <h3 class="artist-name">Newfound Interest in Connecticut</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: Post-Rock, Midwest Emo, Math Rock, Post-Hardcore, Field Recordings
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
-                <aside class="music-card-items">
-                    <h2 class="album-title">Tell Me About The Long Dark Path Home by We Are Busy Bodies</h2>
-                    <h3 class="artist-name">Newfound Interest in Connecticut</h3>
-                    <div class="genre-list">
-                        <b>Genres</b>: Post-Rock, Midwest Emo, Math Rock, Post-Hardcore, Field Recordings
+                <div class="music-card electronic experimental">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=641124065/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://autechre.bandcamp.com/album/confield">
+                            Confield by Autechre</a>
+                        </iframe>
                     </div>
-                    <div class="review">
-                        <h1>ReverieVeil's Review</h1>
-                        <p>
-                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
-                        </p>
-                    </div>
-                </aside>
-            </div>
-            <div class="music-card">
-                <div class="music-visual">
-                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=641124065/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://autechre.bandcamp.com/album/confield">
-                        Confield by Autechre</a>
-                    </iframe>
+                    <aside class="music-card-items">
+                        <h2 class="album-title">Confield</h2>
+                        <h3 class="artist-name">Autechre</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: IDM, Experimental, Glitch, Ambient, Micromontage
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
-                <aside class="music-card-items">
-                    <h2 class="album-title">Confield</h2>
-                    <h3 class="artist-name">Autechre</h3>
-                    <div class="genre-list">
-                        <b>Genres</b>: IDM, Experimental, Glitch, Ambient, Micromontage
+                <div class="music-card punk metal">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2136994288/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="https://alpinist.bandcamp.com/album/minus-mensch">
+                            minus.mensch by Alpinist</a>
+                        </iframe>
                     </div>
-                    <div class="review">
-                        <h1>ReverieVeil's Review</h1>
-                        <p>
-                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
-                        </p>
-                    </div>
-                </aside>
-            </div>
-            <div class="music-card">
-                <div class="music-visual">
-                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2136994288/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="https://alpinist.bandcamp.com/album/minus-mensch">
-                        minus.mensch by Alpinist</a>
-                    </iframe>
+                    <aside class="music-card-items">
+                        <h2 class="album-title">minus.mensch</h2>
+                        <h3 class="artist-name">Alpinist</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: Neocrust, Screamo, Sludge Metal
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
-                <aside class="music-card-items">
-                    <h2 class="album-title">minus.mensch</h2>
-                    <h3 class="artist-name">Alpinist</h3>
-                    <div class="genre-list">
-                        <b>Genres</b>: Neocrust, Screamo, Sludge Metal
+                <div class="music-card electronic ambient experimental">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2069212504/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://celer.bandcamp.com/album/you-and-i-cant-ever-change-expanded">
+                            You and I Can&#39;t Ever Change (Expanded) by Celer</a>
+                        </iframe>
                     </div>
-                    <div class="review">
-                        <h1>ReverieVeil's Review</h1>
-                        <p>
-                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
-                        </p>
-                    </div>
-                </aside>
-            </div>
-            <div class="music-card">
-                <div class="music-visual">
-                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2069212504/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://celer.bandcamp.com/album/you-and-i-cant-ever-change-expanded">
-                        You and I Can&#39;t Ever Change (Expanded) by Celer</a>
-                    </iframe>
+                    <aside class="music-card-items">
+                        <h2 class="album-title">You and I Can't Ever Change</h2>
+                        <h3 class="artist-name">Celer</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: Drone, Ambient, Tape Music
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
-                <aside class="music-card-items">
-                    <h2 class="album-title">You and I Can't Ever Change</h2>
-                    <h3 class="artist-name">Celer</h3>
-                    <div class="genre-list">
-                        <b>Genres</b>: Drone, Ambient, Tape Music
+                <div class="music-card folk singer-songwriter">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=3290494343/size=large/bgcol=ffffff/linkcol=7137dc/tracklist=false/transparent=true/" seamless><a href="https://dianecluck.bandcamp.com/album/oh-vanille-ova-nil">
+                            Oh Vanille / ova nil by Diane Cluck</a>
+                        </iframe>
                     </div>
-                    <div class="review">
-                        <h1>ReverieVeil's Review</h1>
-                        <p>
-                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
-                        </p>
-                    </div>
-                </aside>
-            </div>
-            <div class="music-card">
-                <div class="music-visual">
-                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=3290494343/size=large/bgcol=ffffff/linkcol=7137dc/tracklist=false/transparent=true/" seamless><a href="https://dianecluck.bandcamp.com/album/oh-vanille-ova-nil">
-                        Oh Vanille / ova nil by Diane Cluck</a>
-                    </iframe>
+                    <aside class="music-card-items">
+                        <h2 class="album-title">Oh Vanille / Ova Nil</h2>
+                        <h3 class="artist-name">Diane Cluck</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: 	Singer-Songwriter, Indie Folk, Freak Folk <br>
+                            <b>Scene</b>: New Weird America
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
-                <aside class="music-card-items">
-                    <h2 class="album-title">Oh Vanille / Ova Nil</h2>
-                    <h3 class="artist-name">Diane Cluck</h3>
-                    <div class="genre-list">
-                        <b>Genres</b>: 	Singer-Songwriter, Indie Folk, Freak Folk <br>
-                        <b>Scene</b>: New Weird America
+                <div class="music-card rock">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=142712310/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://thegathering.bandcamp.com/album/souvenirs">
+                            Souvenirs by The Gathering</a>
+                        </iframe>
                     </div>
-                    <div class="review">
-                        <h1>ReverieVeil's Review</h1>
-                        <p>
-                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
-                        </p>
-                    </div>
-                </aside>
-            </div>
-            <div class="music-card">
-                <div class="music-visual">
-                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=142712310/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://thegathering.bandcamp.com/album/souvenirs">
-                        Souvenirs by The Gathering</a>
-                    </iframe>
+                    <aside class="music-card-items">
+                        <h2 class="album-title">Souvenirs</h2>
+                        <h3 class="artist-name">The Gathering</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: Art Rock, Trip Hop, Alternative Rock
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
-                <aside class="music-card-items">
-                    <h2 class="album-title">Souvenirs</h2>
-                    <h3 class="artist-name">The Gathering</h3>
-                    <div class="genre-list">
-                        <b>Genres</b>: Art Rock, Trip Hop, Alternative Rock
+                <div class="music-card metal punk experimental">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2452365291/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/" seamless><a href="https://khanate.bandcamp.com/album/khanate">
+                            Khanate by Khanate</a>
+                        </iframe>
                     </div>
-                    <div class="review">
-                        <h1>ReverieVeil's Review</h1>
-                        <p>
-                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
-                        </p>
-                    </div>
-                </aside>
-            </div>
-            <div class="music-card">
-                <div class="music-visual">
-                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2452365291/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/" seamless><a href="https://khanate.bandcamp.com/album/khanate">
-                        Khanate by Khanate</a>
-                    </iframe>
+                    <aside class="music-card-items">
+                        <h2 class="album-title">Khanate</h2>
+                        <h3 class="artist-name">Khanate</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: Drone Metal, Sludge Metal, Doom Metal, Noise Rock
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
-                <aside class="music-card-items">
-                    <h2 class="album-title">Khanate</h2>
-                    <h3 class="artist-name">Khanate</h3>
-                    <div class="genre-list">
-                        <b>Genres</b>: Drone Metal, Sludge Metal, Doom Metal, Noise Rock
+                <div class="music-card pop electronic experimental">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=846998514/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/transparent=true/" seamless><a href="https://khonnor.bandcamp.com/album/handwriting">
+                            Handwriting by khonnor</a>
+                        </iframe>
                     </div>
-                    <div class="review">
-                        <h1>ReverieVeil's Review</h1>
-                        <p>
-                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
-                        </p>
-                    </div>
-                </aside>
-            </div>
-            <div class="music-card">
-                <div class="music-visual">
-                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=846998514/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/transparent=true/" seamless><a href="https://khonnor.bandcamp.com/album/handwriting">
-                        Handwriting by khonnor</a>
-                    </iframe>
+                    <aside class="music-card-items">
+                        <h2 class="album-title">Handwriting</h2>
+                        <h3 class="artist-name">khonnor</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: Indietronica, Glitch Pop, Ambient, Shoegaze, Folktronica
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
-                <aside class="music-card-items">
-                    <h2 class="album-title">Handwriting</h2>
-                    <h3 class="artist-name">khonnor</h3>
-                    <div class="genre-list">
-                        <b>Genres</b>: Indietronica, Glitch Pop, Ambient, Shoegaze, Folktronica
+                <div class="music-card pop electronic">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=1709829577/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://magdalenabay.bandcamp.com/album/imaginal-disk">
+                            Imaginal Disk by Magdalena Bay</a>
+                        </iframe>
                     </div>
-                    <div class="review">
-                        <h1>ReverieVeil's Review</h1>
-                        <p>
-                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
-                        </p>
-                    </div>
-                </aside>
-            </div>
-            <div class="music-card">
-                <div class="music-visual">
-                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=1709829577/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://magdalenabay.bandcamp.com/album/imaginal-disk">
-                        Imaginal Disk by Magdalena Bay</a>
-                    </iframe>
+                    <aside class="music-card-items">
+                        <h2 class="album-title">Imaginal Disk</h2>
+                        <h3 class="artist-name">Magdalena Bay</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: Neo-Psychedelia, Synthpop, Chillwave, Dance-Pop, Progressive Pop, Alternative Dance, Indietronica
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
-                <aside class="music-card-items">
-                    <h2 class="album-title">Imaginal Disk</h2>
-                    <h3 class="artist-name">Magdalena Bay</h3>
-                    <div class="genre-list">
-                        <b>Genres</b>: Neo-Psychedelia, Synthpop, Chillwave, Dance-Pop, Progressive Pop, Alternative Dance, Indietronica
+                <div class="music-card rock punk">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=3551092233/size=large/bgcol=333333/linkcol=e99708/tracklist=false/transparent=true/" seamless><a href="https://thepurl.bandcamp.com/album/summer">
+                            summer by purl</a>
+                        </iframe>
                     </div>
-                    <div class="review">
-                        <h1>ReverieVeil's Review</h1>
-                        <p>
-                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
-                        </p>
-                    </div>
-                </aside>
-            </div>
-            <div class="music-card">
-                <div class="music-visual">
-                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=3551092233/size=large/bgcol=333333/linkcol=e99708/tracklist=false/transparent=true/" seamless><a href="https://thepurl.bandcamp.com/album/summer">
-                        summer by purl</a>
-                    </iframe>
+                    <aside class="music-card-items">
+                        <h2 class="album-title">Summer</h2>
+                        <h3 class="artist-name">purl</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: Post-Rock, Emo, Slowcore, Slowcore, Post-Hardcore, Tape Music, Slacker Rock, Midwest Emo, Ambient, Modern Classical <br>
+                            <b>Scene</b>: San Diego Sound
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
-                <aside class="music-card-items">
-                    <h2 class="album-title">Summer</h2>
-                    <h3 class="artist-name">purl</h3>
-                    <div class="genre-list">
-                        <b>Genres</b>: Post-Rock, Emo, Slowcore, Slowcore, Post-Hardcore, Tape Music, Slacker Rock, Midwest Emo, Ambient, Modern Classical <br>
-                        <b>Scene</b>: San Diego Sound
+                <div class="music-card pop rock">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=67026166/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/transparent=true/" seamless><a href="https://shoegazepilipinas.bandcamp.com/album/waiting-for-your-words-early-recordings-2000-2002">
+                            Waiting For Your Words: Early Recordings 2000-2002 by Soft Pillow Kisses</a>
+                        </iframe>
                     </div>
-                    <div class="review">
-                        <h1>ReverieVeil's Review</h1>
-                        <p>
-                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
-                        </p>
-                    </div>
-                </aside>
-            </div>
-            <div class="music-card">
-                <div class="music-visual">
-                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=67026166/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/transparent=true/" seamless><a href="https://shoegazepilipinas.bandcamp.com/album/waiting-for-your-words-early-recordings-2000-2002">
-                        Waiting For Your Words: Early Recordings 2000-2002 by Soft Pillow Kisses</a>
-                    </iframe>
+                    <aside class="music-card-items">
+                        <h2 class="album-title">Waiting For Your Words: Early Recordings 2000-2002</h2>
+                        <h3 class="artist-name">Soft Pillow Kisses</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: Dream Pop, Twee Pop, Indie Pop, Shoegaze, Jangle Pop
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
-                <aside class="music-card-items">
-                    <h2 class="album-title">Waiting For Your Words: Early Recordings 2000-2002</h2>
-                    <h3 class="artist-name">Soft Pillow Kisses</h3>
-                    <div class="genre-list">
-                        <b>Genres</b>: Dream Pop, Twee Pop, Indie Pop, Shoegaze, Jangle Pop
+                <div class="music-card electronic ambient experimental">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=3299850304/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://omnimemento.bandcamp.com/album/eclosion">
+                            Eclosion 羽化 by Hitoshi Kojo</a>
+                        </iframe>
                     </div>
-                    <div class="review">
-                        <h1>ReverieVeil's Review</h1>
-                        <p>
-                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
-                        </p>
-                    </div>
-                </aside>
-            </div>
-            <div class="music-card">
-                <div class="music-visual">
-                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=3299850304/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://omnimemento.bandcamp.com/album/eclosion">
-                        Eclosion 羽化 by Hitoshi Kojo</a>
-                    </iframe>
+                    <aside class="music-card-items">
+                        <h2 class="album-title">Eclosion 羽化</h2>
+                        <h3 class="artist-name">Hitoshi Kojo</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: Electroacoustic, Drone, Free Folk, Ambient, New Age
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
-                <aside class="music-card-items">
-                    <h2 class="album-title">Eclosion 羽化</h2>
-                    <h3 class="artist-name">Hitoshi Kojo</h3>
-                    <div class="genre-list">
-                        <b>Genres</b>: Electroacoustic, Drone, Free Folk, Ambient, New Age
+                <div class="music-card pop electronic ambient">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=4023755127/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="https://yeule.bandcamp.com/album/serotonin-ii">
+                            Serotonin II by yeule</a>
+                        </iframe>
                     </div>
-                    <div class="review">
-                        <h1>ReverieVeil's Review</h1>
-                        <p>
-                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
-                        </p>
-                    </div>
-                </aside>
-            </div>
-            <div class="music-card">
-                <div class="music-visual">
-                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=4023755127/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="https://yeule.bandcamp.com/album/serotonin-ii">
-                        Serotonin II by yeule</a>
-                    </iframe>
+                    <aside class="music-card-items">
+                        <h2 class="album-title">Serotonin II</h2>
+                        <h3 class="artist-name">yeule</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: Ambient Pop, Synthpop, Chillout, Chillwave, Ambient, Glitch Pop, Ambient House, Art Pop
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
-                <aside class="music-card-items">
-                    <h2 class="album-title">Serotonin II</h2>
-                    <h3 class="artist-name">yeule</h3>
-                    <div class="genre-list">
-                        <b>Genres</b>: Ambient Pop, Synthpop, Chillout, Chillwave, Ambient, Glitch Pop, Ambient House, Art Pop
+                <div class="music-card rock pop">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=1674435176/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="https://brokensocialscene.bandcamp.com/album/you-forgot-it-in-people">
+                            You Forgot It In People by Broken Social Scene</a>
+                        </iframe>
                     </div>
-                    <div class="review">
-                        <h1>ReverieVeil's Review</h1>
-                        <p>
-                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
-                        </p>
-                    </div>
-                </aside>
-            </div>
-            <div class="music-card">
-                <div class="music-visual">
-                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=1674435176/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="https://brokensocialscene.bandcamp.com/album/you-forgot-it-in-people">
-                        You Forgot It In People by Broken Social Scene</a>
-                    </iframe>
+                    <aside class="music-card-items">
+                        <h2 class="album-title">You Forgot It In People</h2>
+                        <h3 class="artist-name">Broken Social Scene</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: Indie Rock, Art Rock, Chamber Pop, Post-Rock, Slacker Rock, Art Rock
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
-                <aside class="music-card-items">
-                    <h2 class="album-title">You Forgot It In People</h2>
-                    <h3 class="artist-name">Broken Social Scene</h3>
-                    <div class="genre-list">
-                        <b>Genres</b>: Indie Rock, Art Rock, Chamber Pop, Post-Rock, Slacker Rock, Art Rock
+                <div class="music-card psychedelia pop electronic">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=727683696/size=large/bgcol=ffffff/linkcol=e99708/tracklist=false/transparent=true/" seamless><a href="https://corneliusofficial.bandcamp.com/album/fantasma-remastered">
+                            Fantasma (Remastered) by Cornelius</a>
+                        </iframe>
                     </div>
-                    <div class="review">
-                        <h1>ReverieVeil's Review</h1>
-                        <p>
-                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
-                        </p>
-                    </div>
-                </aside>
-            </div>
-            <div class="music-card">
-                <div class="music-visual">
-                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=727683696/size=large/bgcol=ffffff/linkcol=e99708/tracklist=false/transparent=true/" seamless><a href="https://corneliusofficial.bandcamp.com/album/fantasma-remastered">
-                        Fantasma (Remastered) by Cornelius</a>
-                    </iframe>
+                    <aside class="music-card-items">
+                        <h2 class="album-title">Fantasma</h2>
+                        <h3 class="artist-name">Cornelius</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: Shibuya-kei, Indietronica, Neo-Psychedelia, Psychedelic Pop, Plunderphonics, Picopop, Noise Pop, Breakbeat, Art Pop, Indie Rock
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
-                <aside class="music-card-items">
-                    <h2 class="album-title">Fantasma (Remastered)</h2>
-                    <h3 class="artist-name">Cornelius</h3>
-                    <div class="genre-list">
-                        <b>Genres</b>: Shibuya-kei, Indietronica, Neo-Psychedelia, Psychedelic Pop, Plunderphonics, Picopop, Noise Pop, Breakbeat, Art Pop, Indie Rock
+                <div class="music-card rock experimental classical punk">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=424516581/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="https://glennbranca1.bandcamp.com/album/the-third-ascension">
+                            The Third Ascension by Glenn Branca</a>
+                        </iframe>
                     </div>
-                    <div class="review">
-                        <h1>ReverieVeil's Review</h1>
-                        <p>
-                            Slint's Spiderland is an album of haunted isolation and raw emotion, a post-rock masterpiece that weaves the sonic landscapes into the dark seas; sparse, haunting melodies and intricate rhythms create a sense of beauty in the mist and desolated introspection. The album's broaded in melancholia and poetry, with spoken word passages and dynamic shifts that evoke a sense of unease and catharsis. Spiderland is a timeless work that captures the essence of post-rock's ability to convey deep emotions through instrumental storytelling, making it a must-listen for those seeking an immersive and introspective musical experience.
-                        </p>
+                    <aside class="music-card-items">
+                        <h2 class="album-title">The Third Ascension</h2>
+                        <h3 class="artist-name">Glenn Brana</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: Totalism, Experimental Rock, Noise Rock, Post-Rock <br>
+                            <b>Scene</b>: No Wave
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <div class="music-card jazz experimental world">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=914176455/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/transparent=true/" seamless><a href="https://matana-roberts.bandcamp.com/album/coin-coin-chapter-one-gens-de-couleur-libres-3">
+                            Coin Coin Chapter One: Gens de couleur libres by Matana Roberts</a>
+                        </iframe>
                     </div>
-                </aside>
-            </div>
-        </section>
+                    <aside class="music-card-items ">
+                        <h2 class="album-title">Coin Coin Chapter One: Gens de couleur libres</h2>
+                        <h3 class="artist-name">Matana Roberts</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: Avant-Garde Jazz, Spiritual Jazz, Free Jazz, Jazz Poetry, Spoken Word, Spirituals, Modern Creative
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <div class="music-card hip-hop electronic experimental">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=1716768917/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/transparent=true/" seamless><a href="https://yayayi.bandcamp.com/album/yayayi">
+                            YAYAYI by YAYAYI</a>
+                        </iframe>
+                    </div>
+                    <aside class="music-card-items ">
+                        <h2 class="album-title">YAYAYI</h2>
+                        <h3 class="artist-name">YAYAYI</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: 	Chopped and Screwed, Glitch Hop, Experimental Hip Hop, Instrumental Hip Hop, Trap, Wonky, Snap, Cloud Rap <br>
+                            <b>Scene</b>: LA Beat Scene
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <div class="music-card hip-hop industrial experimental">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=770160469/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="https://dalek.bandcamp.com/album/absence">
+                            Absence by Dälek</a></iframe>
+                    </div>
+                    <aside class="music-card-items ">
+                        <h2 class="album-title">YAYAYI</h2>
+                        <h3 class="artist-name">YAYAYI</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: Industrial Hip Hop, Conscious Hip Hop, Abstract Hip Hop, Experimental Hip Hop, Noise, Dark Ambient, Political Hip Hop, Hardcore Hip Hop, Noise Rock
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <div class="music-card pop electronic rnb jazz experimental hip-hop">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=789536547/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/transparent=true/" seamless><a href="https://standingonthecorner.bandcamp.com/album/red-burns">
+                            RED BURNS by Standing On The Corner</a>
+                        </iframe>
+                    </div>
+                    <aside class="music-card-items ">
+                        <h2 class="album-title">RED BURNS</h2>
+                        <h3 class="artist-name">Standing On The Corner</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: Sound Collage, Neo-Soul, Hypnagogic Pop, Poetry, Spoken Word, Avant-Garde Jazz, Psychedelic Soul, Abstract Hip Hop, Plunderphonics, Experimental Hip Hop <br>
+                            <b>Scene</b>: Afrofuturism
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <div class="music-card rnb jazz experimental classical">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=665089067/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/transparent=true/" seamless><a href="https://sunramusic.bandcamp.com/album/the-magic-city-cd-lp-digital">
+                            The Magic City by Sun Ra &amp; His Arkestra</a></iframe>
+                    </div>
+                    <aside class="music-card-items">
+                        <h2 class="album-title">The Magic City</h2>
+                        <h3 class="artist-name">Sun Ra &amp; His Arkestra</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: Free Jazz, Conducted Improvisation, Modern Creative <br>
+                            <b>Scene</b>: Afrofuturism
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <div class="music-card industrial ambient rock experimental metal">
+                    <div class="music-visual">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=577873192/size=large/bgcol=333333/linkcol=4ec5ec/tracklist=false/transparent=true/" seamless><a href="https://uboa.bandcamp.com/album/impossible-light-2">
+                            Impossible Light by Uboa</a></iframe>
+                    </div>
+                    <aside class="music-card-items">
+                        <h2 class="album-title">Impossible Light</h2>
+                        <h3 class="artist-name">Uboa</h3>
+                        <div class="genre-list">
+                            <b>Genres</b>: Death Industrial, Dark Ambient, Industrial Rock, Neoclassical Darkwave, Harsh Noise, Glitch, Post-Metal
+                        </div>
+                        <div class="sources">
+                            <h1>SOURCES: </h1>
+                            <div class="links-icon">
+                                <a href="https://rateyourmusic.com/release/album/slint/spiderland/" target="_blank">
+                                    <img src="../ICONS/noun-music-info-4155288.png" alt="RateYourMusic Information" class="icon-small">
+                                </a>
+                                <a href="https://music.apple.com/ph/album/spiderland/1117723921">
+                                    <img src="../ICONS/icons8-itunes-logo-100.png" alt="iTunes" class="icon-small">
+                                </a>
+                                <a href="https://open.spotify.com/album/0cp3HJ6szImZfnVSPHDqAU">
+                                    <img src="../ICONS/icons8-spotify-logo-100.png" alt="Spotify" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+        </div>
         <footer class="contact">
             <div class="contact-wrapper">
                 <h1>CONTACT ME!</h1>

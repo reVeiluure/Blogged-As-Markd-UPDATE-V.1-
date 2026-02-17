@@ -137,6 +137,9 @@
     transform: translateX(0px);
   }
 }
+html {
+    scroll-behavior: smooth;
+}
 #menu-toggle {
     display: none;
 }
@@ -256,42 +259,58 @@ main.intro-main-page {
     justify-content: space-between;
     align-items: center;
     text-align: left;
-    .intro-main-page {
-    overflow: visible;
-}
 }
 #intro-bio {
     border-left: 15px solid black;
     padding-left: 30px;
 }
+.intro-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+.intro-text {
+    flex: 1;
+}
 .nav-main {
-    display: inline-block; 
-    margin: 70px auto; 
-    position: fixed;
+    position: sticky;
     top: 20px;
-    right: 20px;
+    z-index: 1000;
+    width: 600px;
+    margin: 0 auto 40px auto;
     background-color: white;
-    padding: 15px 30px;
     border: 4px solid black;
     box-shadow: 10px 10px 0px black;
     font-family: 'Bebas Neue', sans-serif;
-    z-index: 1000;
 }
 .nav-main ul {
-    display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+.nav-main li {
+    flex: 1;
+    border-right: 2px solid black;
+}
+.nav-main li:last-child {
+    border-right: none;
 }
 .nav-main a {
+    display: block;
+    padding: 15px;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-transform: uppercase;
+    color: black;
+    font-size: 1.3rem;
+    text-align: center;
 }
 .nav-main a:hover {
     background: black;
-    color: white;
+    color: yellow;
 }
 mark.intro-highlight {
     background-color: black;
@@ -654,6 +673,9 @@ body.home {
     margin: 0;
     padding: 0;
     padding-top: 50px;
+}
+body.page {
+    padding-top: 2rem;
 }
 h4 {
     font-family: 'Black Writing', sans-serif;
