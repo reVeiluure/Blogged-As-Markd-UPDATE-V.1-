@@ -14,72 +14,80 @@
 .filter-input {
     display: none !important;
 }
-#rock:checked ~ .music-container .music-card,
-#industrial:checked ~ .music-container .music-card,
-#experimental:checked ~ .music-container .music-card,
-#ambient:checked ~ .music-container .music-card,
-#punk:checked ~ .music-container .music-card,
-#pop:checked ~ .music-container .music-card,
-#jazz:checked ~ .music-container .music-card,
-#folk:checked ~ .music-container .music-card,
-#world:checked ~ .music-container .music-card,
-#singer-songwriter:checked ~ .music-container .music-card,
-#classical:checked ~ .music-container .music-card,
-#hip-hop:checked ~ .music-container .music-card,
-#rnb:checked ~ .music-container .music-card,
-#metal:checked ~ .music-container .music-card,
-#psychedelia:checked ~ .music-container .music-card,
-#electronic:checked ~ .music-container .music-card {
+#comedy:checked ~ .film-container .film-card,
+#mystery:checked ~ .film-container .film-card,
+#drama:checked ~ .film-container .film-card,
+#surrealism:checked ~ .film-container .film-card,
+#historical:checked ~ .film-container .film-card,
+#documentary:checked ~ .film-container .film-card,
+#experimental:checked ~ .film-container .film-card,
+#political:checked ~ .film-container .film-card,
+#horror:checked ~ .film-container .film-card,
+#thriller:checked ~ .film-container .film-card,
+#psychological:checked ~ .film-container .film-card,
+#animation:checked ~ .film-container .film-card,
+#postmodernism:checked ~ .film-container .film-card,
+#noir:checked ~ .film-container .film-card,
+#romance:checked ~ .film-container .film-card,
+#family:checked ~ .film-container .film-card,
+#sci-fi:checked ~ .film-container .film-card,
+#coa:checked ~ .film-container .film-card {
     display: none;
 }
-#all:checked ~ .music-container .music-card,
-#rock:checked ~ .music-container .rock,
-#industrial:checked ~ .music-container .industrial,
-#experimental:checked ~ .music-container .experimental,
-#ambient:checked ~ .music-container .ambient,
-#punk:checked ~ .music-container .punk,
-#pop:checked ~ .music-container .pop,
-#jazz:checked ~ .music-container .jazz,
-#folk:checked ~ .music-container .folk,
-#world:checked ~ .music-container .world,
-#singer-songwriter:checked ~ .music-container .singer-songwriter,
-#classical:checked ~ .music-container .classical,
-#hip-hop:checked ~ .music-container .hip-hop,
-#rnb:checked ~ .music-container .rnb,
-#metal:checked ~ .music-container .metal,
-#psychedelia:checked ~ .music-container .psychedelia,
-#electronic:checked ~ .music-container .electronic {
+#all:checked ~ .film-container .film-card,
+#comedy:checked ~ .film-container .comedy,
+#mystery:checked ~ .film-container .mystery,
+#drama:checked ~ .film-container .drama,
+#surrealism:checked ~ .film-container .surrealism,
+#historical:checked ~ .film-container .historical,
+#documentary:checked ~ .film-container .documentary,
+#experimental:checked ~ .film-container .experimental,
+#political:checked ~ .film-container .political,
+#horror:checked ~ .film-container .horror,
+#thriller:checked ~ .film-container .thriller,
+#psychological:checked ~ .film-container .psychological,
+#animation:checked ~ .film-container .animation,
+#postmodernism:checked ~ .film-container .postmodernism,
+#noir:checked ~ .film-container .noir,
+#romance:checked ~ .film-container .romance,
+#family:checked ~ .film-container .family,
+#sci-fi:checked ~ .film-container .sci-fi,
+#coa:checked ~ .film-container .coa {
     display: flex !important;
 }
-#all:checked ~ .beats-nav label[for="all"],
-#rock:checked ~ .beats-nav label[for="rock"],
-#industrial:checked ~ .beats-nav label[for="industrial"],
-#experimental:checked ~ .beats-nav label[for="experimental"],
-#ambient:checked ~ .beats-nav label[for="ambient"],
-#punk:checked ~ .beats-nav label[for="punk"],
-#pop:checked ~ .beats-nav label[for="pop"],
-#jazz:checked ~ .beats-nav label[for="jazz"],
-#folk:checked ~ .beats-nav label[for="folk"],
-#world:checked ~ .beats-nav label[for="world"],
-#singer-songwriter:checked ~ .beats-nav label[for="singer-songwriter"],
-#classical:checked ~ .beats-nav label[for="classical"],
-#hip-hop:checked ~ .beats-nav label[for="hip-hop"],
-#rnb:checked ~ .beats-nav label[for="rnb"],
-#metal:checked ~ .beats-nav label[for="metal"],
-#psychedelia:checked ~ .beats-nav label[for="psychedelia"],
-#electronic:checked ~ .beats-nav label[for="electronic"] {
-    background: rgb(0, 0, 0);
-    color: #ffffff;
+#all:checked ~ .film-nav label[for="all"],
+#comedy:checked ~ .film-nav label[for="comedy"],
+#mystery:checked ~ .film-nav label[for="mystery"],
+#drama:checked ~ .film-nav label[for="drama"],
+#surrealism:checked ~ .film-nav label[for="surrealism"],
+#historical:checked ~ .film-nav label[for="historical"],
+#documentary:checked ~ .film-nav label[for="documentary"],
+#experimental:checked ~ .film-nav label[for="experimental"],
+#political:checked ~ .film-nav label[for="political"],
+#horror:checked ~ .film-nav label[for="horror"],
+#thriller:checked ~ .film-nav label[for="thriller"],
+#psychological:checked ~ .film-nav label[for="psychological"],
+#animation:checked ~ .film-nav label[for="animation"],
+#postmodernism:checked ~ .film-nav label[for="postmodernism"],
+#noir:checked ~ .film-nav label[for="noir"],
+#romance:checked ~ .film-nav label[for="romance"],
+#family:checked ~ .film-nav label[for="family"],
+#sci-fi:checked ~ .film-nav label[for="sci-fi"],
+#coa:checked ~ .film-nav label[for="coa"] {
+    background: #000;
+    color: #fff;
     text-decoration: line-through;
 }
 .main-content-wrapper {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    gap: 0;
+    gap: 40px; 
     max-width: 1400px;
     margin: 0 auto;
     padding: 20px;
+    position: relative;
 }
 .film-nav {
     position: sticky;
@@ -100,7 +108,7 @@
     margin: 10px 0 0 0;
     border: 3px solid black;
     background: white;
-    box-shadow: 6px 6px 0px black;
+    box-shadow: 8px 8px 0px black;
     max-height: 400px;
     overflow-y: auto;
     transition: all 0.2s ease;
@@ -132,7 +140,7 @@
     background-color: yellow;
     text-decoration: underline;
 }
-#menu-toggle:checked ~ .beats-nav .genre-list-container {
+#menu-toggle:checked ~ .film-nav .genre-list-container {
     display: block;
 }
 .menu-button {
