@@ -27,12 +27,16 @@
 #psychological:checked ~ .film-container .film-card,
 #animation:checked ~ .film-container .film-card,
 #postmodernism:checked ~ .film-container .film-card,
+#lgbtq:checked ~ .film-container .film-card,
 #noir:checked ~ .film-container .film-card,
+#crime:checked ~ .film-container .film-card,
 #romance:checked ~ .film-container .film-card,
 #family:checked ~ .film-container .film-card,
-#sci-fi:checked ~ .film-container .film-card,
-#coa:checked ~ .film-container .film-card,
-#sof:checked ~ .film-container .film-card {
+#new-wave:checked ~ .film-container .film-card,
+#anthology:checked ~ .film-container .film-card,
+#arthouse:checked ~ .film-container .film-card,
+#essay:checked ~ .film-container .film-card,
+#road:checked ~ .film-container .film-card {
     display: none;
 }
 #all:checked ~ .film-container .film-card,
@@ -49,12 +53,16 @@
 #psychological:checked ~ .film-container .psychological,
 #animation:checked ~ .film-container .animation,
 #postmodernism:checked ~ .film-container .postmodernism,
+#lgbtq:checked ~ .film-container .lgbtq,
 #noir:checked ~ .film-container .noir,
+#crime:checked ~ .film-container .crime,
 #romance:checked ~ .film-container .romance,
 #family:checked ~ .film-container .family,
-#sci-fi:checked ~ .film-container .sci-fi,
-#coa:checked ~ .film-container .coa,
-#sof:checked ~ .film-container .sof {
+#new-wave:checked ~ .film-container .new-wave,
+#anthology:checked ~ .film-container .anthology,
+#arthouse:checked ~ .film-container .arthouse,
+#essay:checked ~ .film-container .essay,
+#road:checked ~ .film-container .road {
     display: flex !important;
 }
 #all:checked ~ .film-nav label[for="all"],
@@ -71,12 +79,19 @@
 #psychological:checked ~ .film-nav label[for="psychological"],
 #animation:checked ~ .film-nav label[for="animation"],
 #postmodernism:checked ~ .film-nav label[for="postmodernism"],
+#lgbtq:checked ~ .film-nav label[for="lgbtq"],
 #noir:checked ~ .film-nav label[for="noir"],
+#crime:checked ~ .film-nav label[for="crime"],
 #romance:checked ~ .film-nav label[for="romance"],
 #family:checked ~ .film-nav label[for="family"],
 #sci-fi:checked ~ .film-nav label[for="sci-fi"],
 #coa:checked ~ .film-nav label[for="coa"],
-#sof:checked ~ .film-nav label[for="sof"] {
+#sof:checked ~ .film-nav label[for="sof"],
+#new-wave:checked ~ .film-nav label[for="new-wave"],
+#anthology:checked ~ .film-nav label[for="anthology"],
+#arthouse:checked ~ .film-nav label[for="arthouse"],
+#essay:checked ~ .film-nav label[for="essay"],
+#road:checked ~ .film-nav label[for="road"] {
     background: #000;
     color: #fff;
     text-decoration: line-through;
@@ -366,4 +381,108 @@ h3.crew-name {
 .sources > h1 {
     font-weight: bold;
     text-decoration: underline;
+}
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 20px auto;
+    align-items: center;
+}
+.genre-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    padding: 4px 10px;
+    cursor: default;
+    box-shadow: 3px 3px 0px #000000;
+    transition: all 0.1s ease;
+}
+.genre-tag:hover {
+    background-color: #ffff00;
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px #000000;
+}
+.genre-tag:active {
+    background-color: #000000;
+    color: white;
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px #000000;
+}
+.alt-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    line-height: 0.85;
+    margin: -15px 0 10px 0;
+    background: black;
+    color: white;
+    font-style: italic;
+    display: inline-block;
+    padding: 0 10px;
+    width: fit-content;
+}
+.credits-section {
+    border-top: 3px solid black;
+    padding-top: 20px;
+}
+.credits-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+}
+.credit-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 2px;
+}
+.credit-item b {
+    color: #000;
+    text-transform: uppercase;
+    padding-right: 10px;
+}
+.role {
+    color: #666;
+    font-style: italic;
+    font-size: 0.8rem;
+    background: #fff;
+    padding-left: 10px;
+    text-align: right;
+}
+.credit-item:hover {
+    background-color: #ffff00;
+    border-bottom: 1px solid black;
+}
+.credit-item:hover .role {
+    color: black;
+    background: transparent;
+}
+summary {
+    list-style: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border: 2px solid #000;
+    margin-bottom: 5px;
+}
+summary:hover {
+    background: #7d0000; 
+}
+summary::after {
+    content: ' [+]';
+    float: right;
+}
+details[open] summary::after {
+    content: ' [-]';
 }

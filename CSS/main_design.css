@@ -650,6 +650,12 @@ footer {
     background-color: yellow;
     transition: all 0.2s ease;
 }
+
+mark {
+    background-color: #ffff00;
+    color: black;
+    padding: 0 5px;
+}
 img {
     background-position: center;
     height: 50%;

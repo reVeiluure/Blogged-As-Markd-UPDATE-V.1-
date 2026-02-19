@@ -2,7 +2,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Blogged as Mark'd | PHOTO GALLERY | SELF</title>
+        <title>Blogged as Mark'd | MY FILMS | MOVIES</title>
         <link rel="stylesheet" href="../CSS/main_design.css">
         <link rel="stylesheet" href="../CSS/gallery.css">
         <link rel="stylesheet" href="../CSS/icons.css">
@@ -20,20 +20,15 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="../ABOUT ME/mateo_biography_csad.html" target="_self">Biography</a></li>
                                 </ul>
+                        <li><a href="../BLOG STORIES/blog-navigation.html">BLOGS</a></li>
+                        <li><a href="../gallery_self.html">GALLERY</a></li>
+                        <li><a href="../MY BEATS/mybeats.html" target="_self">Music</a></li>
                         <li class="dropdown">
-                            <a href="#blog_dd">Blog</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="../BLOG STORIES/blogstory1.html" target="_self">Blog Part 1</a></li>
-                                    <li><a href="../BLOG STORIES/blogstory2.html" target="_self">Blog Part 2</a></li>
-                                    <li><a href="../BLOG STORIES/blogstory3.html" target="_self">Blog Part 3</a></li>
-                                </ul>
-                            </li>
-                        <li class="dropdown">
-                            <a href="#photo-gallery_dd">Photo Gallery</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="../gallery_self.html" target="_self">Myself</a></li>
-                                    <li><a href="../gallery_arts.html" target="_self">My Arts</a></li>
-                                </ul>
+                            <a href="#films_dd">FILMS</a>
+                            <ul class="dropdown-menu">
+                                <li id="non-anchor">Movies</a></li>
+                                <li><a href="myfilm-tvshow.html" target="_self">TV SHOWS</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </nav>
@@ -79,12 +74,19 @@
             <input type="radio" name="film-filter" id="psychological" class="filter-input">
             <input type="radio" name="film-filter" id="animation" class="filter-input">
             <input type="radio" name="film-filter" id="postmodernism" class="filter-input">
+            <input type="radio" name="film-filter" id="lgbtq" class="filter-input">
             <input type="radio" name="film-filter" id="noir" class="filter-input">
+            <input type="radio" name="film-filter" id="crime" class="filter-input">
             <input type="radio" name="film-filter" id="romance" class="filter-input">
             <input type="radio" name="film-filter" id="family" class="filter-input">
             <input type="radio" name="film-filter" id="sci-fi" class="filter-input">
             <input type="radio" name="film-filter" id="coa" class="filter-input">
             <input type="radio" name="film-filter" id="sof" class="filter-input">
+            <input type="radio" name="film-filter" id="new-wave" class="filter-input">
+            <input type="radio" name="film-filter" id="anthology" class="filter-input">
+            <input type="radio" name="film-filter" id="arthouse" class="filter-input">
+            <input type="radio" name="film-filter" id="essay" class="filter-input">
+            <input type="radio" name="film-filter" id="road" class="filter-input">
 
             <input type="radio" name="film-filter" id="all" class="filter-input" checked>
             <input type="checkbox" id="menu-toggle" class="filter-input">
@@ -105,15 +107,22 @@
                     <li><label for="psychological">Psychological</label></li>
                     <li><label for="animation">Animation</label></li>
                     <li><label for="postmodernism">Postmodernism</label></li>
+                    <li><label for="lgbtq">LGBTQ</label></li>
                     <li><label for="noir">Noir</label></li>
+                    <li><label for="crime">Crime</label></li>
                     <li><label for="romance">Romance</label></li>
                     <li><label for="family">Family</label></li>
                     <li><label for="sci-fi">Science Fiction</label></li>
                     <li><label for="coa">Coming of Age</label></li>
                     <li><label for="sof">Slice of Life</label></li>
+                    <li><label for="new-wave">New Wave</label></li>
+                    <li><label for="anthology">New Wave</label></li>
+                    <li><label for="arthouse">Arthouse</label></li>
+                    <li><label for="essay">Essay Film</label></li>
+                    <li><label for="road">Road Movie</label></li>
                 </ul>
             </nav>
-            <section class="film-container drama mystery">
+            <section class="film-container drama mystery arthouse new-wave">
                 <div class="film-card rock">
                     <div class="film-visual">
                         <img src="IMAGES/37507-werckmeister-harmonies-0-2000-0-3000-crop.jpg" alt="Werckmeister Harmonies (2000)">
@@ -123,8 +132,20 @@
                         <h2 class="alt-title">Werckmeister harmóniák</h2>
                         <h3 class="crew-name">Béla Tarr</h3>
                         <div class="genre-list">
-                            <b>Genres</b>: Drama, Slow Cinema, Mystery <br><br>
-                            <b>Movement</b>: Fekete széria
+                            <b>Release Date</b>: May 2000 <br><br>
+                            <b>Runtime</b>: 145 minutes <br><br>
+                            <b>Descriptors</b>: Hungary, Black & White, Literary Adaptation, 35mm
+                            <div class="tag-container">
+                                <b>Genres</b>: 
+                                <span class="genre-tag"><label for="drama">Drama</label></span>
+                                <span class="genre-tag"><label for="arthouse">Slow Cinema</label></span>
+                                <span class="genre-tag"><label for="mystery">Mystery</label></span>
+                            </div>
+                            <div class="tag-container">
+                                <b>Movements</b>: 
+                                <span class="genre-tag"><label for="new-wave">Fekete széria</label></span>
+                            </div>
+                            <b>Language</b>: Hungarian, Slovak
                         </div>
                         <div class="player">
                             <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_d5X2t_s9g8?si=70s3k1vm9Ss3iVJD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
@@ -152,10 +173,50 @@
                                     <img src="../ICONS/imdb.png" alt="IMDB" class="icon-small">
                                 </a>
                             </div>
+                            <div class="sources credits-section">
+                            <h1>CAST</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>Lars Rudolph</b> <span class="role">Valuska János</span></div>
+                                <div class="credit-item"><b>Peter Fitz</b> <span class="role">Eszter György</span></div>
+                                <div class="credit-item"><b>Hanna Schygulla</b> <span class="role">Eszter Tünde</span></div>
+                                <div class="credit-item"><b>János Derzsi</b> <span class="role">Férfi kabátban</span></div>
+                                <div class="credit-item"><b>Đoko Rosić</b> <span class="role">Férfi western csizmában</span></div>
+                                <div class="credit-item"><b>Ferenc Kállai</b> <span class="role">Direktor</span></div>
+                                <div class="credit-item"><b>Mihály Kormos</b> <span class="role">Factotum</span></div>
+                                <div class="credit-item"><b>Éva Almássy Albert</b> <span class="role">Piri</span></div>
+                                <div class="credit-item"><b>Irén Szajki</b> <span class="role">Mrs. Harrer</span></div>
+                                <div class="credit-item"><b>Alfréd Járai</b> <span class="role">Lajos Harrer</span></div>
+                                <div class="credit-item"><b>Gyula Pauer</b> <span class="role">Hagelmayer</span></div>
+                                <div class="credit-item"><b>Putyi Horváth</b> <span class="role">Porter</span></div>
+                                <div class="credit-item"><b>György Barkó</b> <span class="role">Mr. Nadabán</span></div>
+                            </div>
+                            <h1>DIRECTOR & CREW</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>Béla Tarr</b> <span class="role">Director, Screenwriter, Associate Producer</span></div>
+                                <div class="credit-item"><b>László Krasznahorkai</b> <span class="role">Screenwriter, Novel Author</span></div>
+                                <div class="credit-item"><b>Miklós Gurbán</b> <span class="role">Cinematographer</span></div>
+                                <div class="credit-item"><b>Gábor Medvigy</b> <span class="role">Cinematographer</span></div>
+                                <div class="credit-item"><b>Emil Novák</b> <span class="role">Cinematographer</span></div>
+                                <div class="credit-item"><b>Rob Tregenza</b> <span class="role">Cinematographer</span></div>
+                                <div class="credit-item"><b>Ágnes Hranitzky</b> <span class="role">Film Editor, Co-Director</span></div>
+                                <div class="credit-item"><b>Mihály Víg</b> <span class="role">Composer: Original Music</span></div>
+                                <div class="credit-item"><b>Roland Vranik</b> <span class="role">Assistant Director</span></div>
+                                <div class="credit-item"><b>Péter Dobai</b> <span class="role">Dialogue Writer</span></div>
+                                <div class="credit-item"><b>György Fehér</b> <span class="role">Dialogue Writer</span></div>
+                                <div class="credit-item"><b>Paul Saadoun</b> <span class="role">Producer</span></div>
+                                <div class="credit-item"><b>Joachim von Vietinghoff</b> <span class="role">Producer</span></div>
+                                <div class="credit-item"><b>András Vágvölgyi B.</b> <span class="role">Associate Producer</span></div>
+                                <div class="credit-item"><b>Zsuzsa Mihalek</b> <span class="role">Set Decorator</span></div>
+                                <div class="credit-item"><b>Zsolt Tóth</b> <span class="role">Set Decorator</span></div>
+                                <div class="credit-item"><b>János Breckl</b> <span class="role">Costume Designer</span></div>
+                                <div class="credit-item"><b>Gábor Téni</b> <span class="role">Production Manager</span></div>
+                                <div class="credit-item"><b>György Kovács</b> <span class="role">Sound Designer, Mixer</span></div>
+                                <div class="credit-item"><b>Éva Szentandrási</b> <span class="role">Assistant Film Editor</span></div>
+                            </div>
                         </div>
                     </aside>
                 </div>
-                <div class="film-card psychological sof surrealism comedy experimental sof animation postmodernism">
+                <div class="film-card psychological sof surrealism comedy experimental sof animation postmodernism essay">
                     <div class="film-visual">
                         <img src="IMAGES/such a beautiful-0-2000-0-3000-crop.jpg" alt="It's Such a Beautiful Day (2012)">
                     </div>
@@ -163,7 +224,23 @@
                         <h2 class="film-title">It's Such a Beautiful Day</h2>
                         <h3 class="crew-name">Don Hertzfeldt</h3>
                         <div class="genre-list">
-                            <b>Genres</b>: Animation, Psychological Drama, Surrealism, Black Comedy, Abstract Film, Essay Film, Slice of Life, Experimental, Postmodernism, Live-Action Animation
+                            <b>Release Date</b>: 24 August 2012 <br><br>
+                            <b>Runtime</b>: 63 minutes <br><br>
+                            <b>Descriptors</b>: United States, Color
+                            <div class="tag-container">
+                                <b>Genres</b>: 
+                                <span class="genre-tag"><label for="animation">Animation</label></span>
+                                <span class="genre-tag"><label for="psychological">Psychological Drama</label></span>
+                                <span class="genre-tag"><label for="surrealism">Surrealism</label></span>
+                                <span class="genre-tag"><label for="comedy">Black Comedy</label></span>
+                                <span class="genre-tag"><label for="experimental">Abstract Film</label></span>
+                                <span class="genre-tag"><label for="essay">Essay Film</label></span>
+                                <span class="genre-tag"><label for="sof">Slice of Life</label></span>
+                                <span class="genre-tag"><label for="experimental">Experimental</label></span>
+                                <span class="genre-tag"><label for="postmodernism">Postmodernism</label></span>
+                                <span class="genre-tag"><label for="animation">Live-Action Animation</label></span>
+                            </div>
+                            <b>Language</b>: English
                         </div>
                         <div class="player">
                             <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/LHMJl2Z2zJA?si=oswcA6NreQKwZ2N3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
@@ -188,10 +265,15 @@
                                     <img src="../ICONS/imdb.png" alt="IMDB" class="icon-small">
                                 </a>
                             </div>
+                            <h1>DIRECTOR & CREW</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>Don Hertzfeldt</b> <span class="role">Director, Producer, Writer, Cinematographer, Animator, Sound Editor, Sound Mixer, Composer: Original Music</span></div>
+                                <div class="credit-item"><b>Brian Hamblin</b> <span class="role">Film Editor</span></div>
+                            </div>
                         </div>
                     </aside>
                 </div>
-                <div class="film-card political drama">
+                <div class="film-card political drama anthology experimental new-wave arthouse">
                     <div class="film-visual">
                         <img src="IMAGES/30720-i-am-cuba-0-2000-0-3000-crop.jpg" alt="I Am Cuba (1964)">
                     </div>
@@ -199,10 +281,24 @@
                         <h2 class="film-title">I Am Cuba</h2>
                         <h2 class="alt-title">'Soy Cuba'</h2>
                         <h3 class="crew-name">Mikheil Kalatozishvili</h3>
-                        
                         <div class="genre-list">
-                            <b>Genres</b>: Political Drama, Anthology Film, Propaganda Film, War, City Symphony <br><br>
-                            <b>Movements</b>: Soviet New Wave, Imperfect Cinema
+                            <b>Release Date</b>: 26 October 1964 <br><br>
+                            <b>Runtime</b>: 141 minutes <br><br>
+                            <b>Descriptors</b>: Soviet Union, Cuba, 35mm, Black & White, Mono
+                            <div class="tag-container">
+                                <b>Genres</b>: 
+                                <span class="genre-tag"><label for="political">Political Drama</label></span>
+                                <span class="genre-tag"><label for="anthology">Anthology Film</label></span>
+                                <span class="genre-tag"><label for="political">Propaganda Film</label></span>
+                                <span class="genre-tag"><label for="political">War</label></span>
+                                <span class="genre-tag"><label for="experimental">City Symphony</label></span>
+                            </div>
+                            <div class="tag-container">
+                                <b>Movements</b>: 
+                                <span class="genre-tag"><label for="new-wave">Soviet New Wave</label></span>
+                                <span class="genre-tag"><label for="arthouse">Imperfect Cinema</label></span>
+                            </div>
+                            <b>Languages</b>: Spanish, English
                         </div>
                         <div class="player">
                             <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6hiV9NQnoa4?si=Zw4ZlEiWLgxOioC0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
@@ -230,9 +326,39 @@
                                 </a>
                             </div>
                         </div>
+                        <div class="sources credits-section">
+                            <h1>CAST</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>Sergio Corrieri</b> <span class="role">Alberto</span></div>
+                                <div class="credit-item"><b>Salvador Wood</b> <span class="role">Peasant</span></div>
+                                <div class="credit-item"><b>José Gallardo</b> <span class="role">Pedro</span></div>
+                                <div class="credit-item"><b>Raúl García</b> <span class="role">Enrique</span></div>
+                                <div class="credit-item"><b>Luz María Collazo</b> <span class="role">Maria / Betty</span></div>
+                                <div class="credit-item"><b>Jean Bouise</b> <span class="role">Jim</span></div>
+                                <div class="credit-item"><b>Raquel Revuelta</b> <span class="role">La Voz de Cuba</span></div>
+                                <div class="credit-item"><b>Luisa María Jiménez</b> <span class="role">Teresa</span></div>
+                            </div>
+                            <h1 style="margin-top: 40px;">CREW</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>Mikhail Kalatozov</b> <span class="role">Director</span></div>
+                                <div class="credit-item"><b>Enrique Pineda Barnet</b> <span class="role">Screenwriter</span></div>
+                                <div class="credit-item"><b>Yevgeny Yevtushenko</b> <span class="role">Screenwriter</span></div>
+                                <div class="credit-item"><b>Semyon Maryakhin</b> <span class="role">Producer</span></div>
+                                <div class="credit-item"><b>Miguel Mendoza</b> <span class="role">Producer</span></div>
+                                <div class="credit-item"><b>Bela Fridman</b> <span class="role">Producer</span></div>
+                                <div class="credit-item"><b>Sergey Urusevsky</b> <span class="role">Cinematographer</span></div>
+                                <div class="credit-item"><b>Nina Glagoleva</b> <span class="role">Film Editor</span></div>
+                                <div class="credit-item"><b>Carlos Fariñas</b> <span class="role">Original Music</span></div>
+                                <div class="credit-item"><b>Manuel Duchesne Cuzán</b> <span class="role">Conductor</span></div>
+                                <div class="credit-item"><b>Jemin Khachaturyan</b> <span class="role">Conductor</span></div>
+                                <div class="credit-item"><b>Eugeny Svidetelev</b> <span class="role">Production Designer</span></div>
+                                <div class="credit-item"><b>René Portocarrero</b> <span class="role">Costume Designer</span></div>
+                                <div class="credit-item"><b>Vladlen Sharun</b> <span class="role">Sound Engineer</span></div>
+                            </div>
+                        </div>
                     </aside>
                 </div>
-                <div class="film-card documentary psychological experimental postmodernism surrealism comedy">
+                <div class="film-card documentary lgbtq psychological crime experimental new-wave essay postmodernism surrealism comedy">
                     <div class="film-visual">
                         <img src="IMAGES/50978-funeral-parade-of-roses-0-2000-0-3000-crop.jpg" alt="Funeral Parade of Roses (1969)">
                     </div>
@@ -241,12 +367,36 @@
                         <h2 class="alt-title">'薔薇の葬列'</h2>
                         <h3 class="crew-name">Toshio Matsumoto</h3>
                         <div class="genre-list">
-                            <b>Genres</b>: Psychological Drama, LGBTQ, Postmodernism, Experimental, Tragedy, Docudrama, Crime, Surrealism, Interview, Black Comedy, Essay Film, Drugsploitation, Cinéma Vérité, Absurdist Comedy, LGBTQ Documentary <br><br>
-                            <b>Movements</b>: Japanese New Wave, Queer Cinema, Hippie Exploitation
+                            <b>Release Date</b>: 13 September 1969 <br><br>
+                            <b>Runtime</b>: 107 minutes <br><br>
+                            <b>Descriptors</b>: Japan, Black & White, Mono
+                            <div class="tag-container">
+                                <b>Genres</b>: 
+                                <span class="genre-tag"><label for="psychological">Psychological Drama</label></span>
+                                <span class="genre-tag"><label for="lgbtq">LGBTQ</label></span>
+                                <span class="genre-tag"><label for="postmodernism">Postmodernism</label></span>
+                                <span class="genre-tag"><label for="drama">Tragedy</label></span>
+                                <span class="genre-tag"><label for="documentary">Docudrama</label></span>
+                                <span class="genre-tag"><label for="crime">Crime</label></span>
+                                <span class="genre-tag"><label for="surrealism">Surrealism</label></span>
+                                <span class="genre-tag"><label for="documentary">Interview</label></span>
+                                <span class="genre-tag"><label for="comedy">Black Comedy</label></span>
+                                <span class="genre-tag"><label for="essay">Essay Film</label></span>
+                                <span class="genre-tag"><label for="crime">Drugsploitation</label></span>
+                                <span class="genre-tag"><label for="documentary">Cinéma Vérité</label></span>
+                                <span class="genre-tag"><label for="comedy">Absurdist Comedy</label></span>
+                                <span class="genre-tag"><label for="documentary">LGBTQ Documentary</label></span>
+                            </div>
+                            <div class="tag-container">
+                                <b>Movements</b>: 
+                                <span class="genre-tag"><label for="new-wave">Japanese New Wave</label></span>
+                                <span class="genre-tag"><label for="lgbtq">Queer Cinema</label></span>
+                                <span class="genre-tag"><label for="new-wave">Hippie Exploitation</label></span>
+                            </div>
+                            <b>Language</b>: Japanese, English
                         </div>
                         <div class="player">
                             <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EteaHqdX6hU?si=a69qGLIV8ympoScf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                                
                             </iframe>
                         </div>
                         <div class="synopsis">
@@ -256,23 +406,57 @@
                         <div class="sources">
                             <h1>SOURCES: </h1>
                             <div class="links-icon">
-                                <a href="https://letterboxd.com/film/i-am-cuba/" target="_blank">
+                                <a href="https://letterboxd.com/film/funeral-parade-of-roses/" target="_blank">
                                     <img src="../ICONS/letterboxd-decal-dots-neg-mono-500px-1003953718.png" alt="Letterboxd" class="icon-small">
                                 </a>
-                                <a href="https://rateyourmusic.com/film/soy-cuba/" target="_blank">
+                                <a href="https://rateyourmusic.com/film/%E8%96%94%E8%96%87%E3%81%AE%E8%91%AC%E5%88%97/" target="_blank">
                                     <img src="../ICONS/noun-movie-information-5438289.png" alt="RateYourMovies" class="icon-small">
                                 </a>
-                                <a href="https://en.wikipedia.org/wiki/I_Am_Cuba" target="_blank">
+                                <a href="https://en.wikipedia.org/wiki/Funeral_Parade_of_Roses" target="_blank">
                                     <img src="../ICONS/icons8-wikipedia-144.png" alt="Wikipedia" class="icon-small">
                                 </a>
-                                <a href="https://www.imdb.com/title/tt0058604/" target="_blank">
+                                <a href="https://www.imdb.com/title/tt0064068/" target="_blank">
                                     <img src="../ICONS/imdb.png" alt="IMDB" class="icon-small">
                                 </a>
                             </div>
                         </div>
+                        <div class="sources credits-section">
+                            <h1>CAST</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>Shinnosuke Ikehata</b> <span class="role">Eddie</span></div>
+                                <div class="credit-item"><b>Yoshio Tsuchiya</b> <span class="role">Gonda</span></div>
+                                <div class="credit-item"><b>Emiko Azuma</b> <span class="role">Eddie's Mother</span></div>
+                                <div class="credit-item"><b>Toshiya Fujita</b> <span class="role">Director (Actor)</span></div>
+                                <div class="credit-item"><b>Kiyoshi Awazu</b> <span class="role">The Painter</span></div>
+                                <div class="credit-item"><b>Osamu Ogasawara</b> <span class="role">Leda</span></div>
+                                <div class="credit-item"><b>Toyoko Iwasaki</b> <span class="role">Madame</span></div>
+                                <div class="credit-item"><b>Yukio Ninagawa</b> <span class="role">Actor</span></div>
+                                <div class="credit-item"><b>Nagaharu Yodogawa</b> <span class="role">Self (Critic)</span></div>
+                                <div class="credit-item"><b>Masahiro Shinoda</b> <span class="role">Self</span></div>
+                                </div>
+                            <h1 style="margin-top: 40px;">CREW</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>Toshio Matsumoto</b> <span class="role">Director & Writer</span></div>
+                                <div class="credit-item"><b>Mitsuru Kudo</b> <span class="role">Producer</span></div>
+                                <div class="credit-item"><b>Keiko Machida</b> <span class="role">Producer</span></div>
+                                <div class="credit-item"><b>Toshie Iwasa</b> <span class="role">Editor</span></div>
+                                <div class="credit-item"><b>Tatsuo Suzuki</b> <span class="role">Cinematography</span></div>
+                                <div class="credit-item"><b>Masato Hara</b> <span class="role">Asst. Director / Producer</span></div>
+                                <div class="credit-item"><b>Kunio Kurita</b> <span class="role">Asst. Director</span></div>
+                                <div class="credit-item"><b>Akio Okumura</b> <span class="role">Asst. Director</span></div>
+                                <div class="credit-item"><b>Ken Uesugi</b> <span class="role">Asst. Director</span></div>
+                                <div class="credit-item"><b>Toshihiko Sato</b> <span class="role">Camera Operator</span></div>
+                                <div class="credit-item"><b>Hirohisa Yamazaki</b> <span class="role">Art Direction</span></div>
+                                <div class="credit-item"><b>Setsu Asakura</b> <span class="role">Art Direction</span></div>
+                                <div class="credit-item"><b>Joji Yuasa</b> <span class="role">Composer</span></div>
+                                <div class="credit-item"><b>Yukio Fukushima</b> <span class="role">Sound</span></div>
+                                <div class="credit-item"><b>Mikio Katayama</b> <span class="role">Sound</span></div>
+                                <div class="credit-item"><b>Shigeo Kobayashi</b> <span class="role">Makeup</span></div>
+                            </div>
+                        </div>
                     </aside>
                 </div>
-                <div class="film-card drama postmodernism sof documentary">
+                <div class="film-card drama postmodernism sof arthouse essay">
                     <div class="film-visual">
                         <img src="IMAGES/36042-my-dinner-with-andre-0-2000-0-3000-crop.jpg" alt="My Dinner With André (1969)">
                     </div>
@@ -280,7 +464,18 @@
                         <h2 class="film-title">My Dinner With André</h2>
                         <h3 class="crew-name">Louis Malle</h3>
                         <div class="genre-list">
-                            <b>Genres</b>: Drama, Slice of Life, Chamber Film, Postmodernism, Essay Film
+                            <b>Release Date</b>: 8 October 1981 <br><br>
+                            <b>Runtime</b>: 111 minutes <br><br>
+                            <b>Descriptors</b>: United States, Color, Mono, 35mm
+                            <div class="tag-container">
+                                <b>Genres</b>: 
+                                <span class="genre-tag"><label for="drama">Drama</label></span>
+                                <span class="genre-tag"><label for="sof">Slice of Life</label></span>
+                                <span class="genre-tag"><label for="arthouse">Chamber Film</label></span>
+                                <span class="genre-tag"><label for="postmodernism">Postmodernism</label></span>
+                                <span class="genre-tag"><label for="essay">Essay Film</label></span>
+                            </div>
+                            <b>Language</b>: English
                         </div>
                         <div class="player">
                             <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mJMO0i-xsbc?si=Xfn0U3mKUkU5GoDk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -307,9 +502,34 @@
                                 </a>
                             </div>
                         </div>
+                        <div class="sources credits-section">
+                            <h1>CAST</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>Wallace Shawn</b> <span class="role">Wally Shawn</span></div>
+                                <div class="credit-item"><b>André Gregory</b> <span class="role">André Gregory</span></div>
+                                <div class="credit-item"><b>Jean Lenauer</b> <span class="role">Waiter</span></div>
+                            </div>
+                            <h1 style="margin-top: 40px;">CREW</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>Louis Malle</b> <span class="role">Director</span></div>
+                                <div class="credit-item"><b>Wallace Shawn</b> <span class="role">Screenwriter</span></div>
+                                <div class="credit-item"><b>André Gregory</b> <span class="role">Screenwriter</span></div>
+                                <div class="credit-item"><b>George W. George</b> <span class="role">Producer</span></div>
+                                <div class="credit-item"><b>Beverly Karp</b> <span class="role">Producer</span></div>
+                                <div class="credit-item"><b>Erik Satie</b> <span class="role">Composer: Additional Music</span></div>
+                                <div class="credit-item"><b>Jeri Sopanen</b> <span class="role">Cinematographer</span></div>
+                                <div class="credit-item"><b>Suzanne Baron</b> <span class="role">Film Editor</span></div>
+                                <div class="credit-item"><b>David Mitchell</b> <span class="role">Production Designer</span></div>
+                                <div class="credit-item"><b>Stephen McCabe</b> <span class="role">Art Director</span></div>
+                                <div class="credit-item"><b>Doug Kraner</b> <span class="role">Set Decorator</span></div>
+                                <div class="credit-item"><b>Lloyd Kaufman</b> <span class="role">Production Manager</span></div>
+                                <div class="credit-item"><b>Jean-Claude Laureux</b> <span class="role">Sound Engineer</span></div>
+                                <div class="credit-item"><b>James Bruce</b> <span class="role">Assistant Film Editor</span></div>
+                            </div>
+                        </div>
                     </aside>
                 </div>
-                <div class="film-card drama psychological sof mystery">
+                <div class="film-card drama psychological sof mystery road">
                     <div class="film-visual">
                         <img src="IMAGES/26484-eureka-0-2000-0-3000-crop.jpg" alt="Eureka (2000)">
                     </div>
@@ -318,36 +538,80 @@
                         <h2 class="alt-title">'ユリイカ'</h2>
                         <h3 class="crew-name">Shinji Aoyama</h3>
                         <div class="genre-list">
-                            <b>Genres</b>: Drama, Road Movie, Slice of Life, Psychological Drama, Slow Cinema, Whodunit	
+                            <b>Release Date</b>: 18 May 2000 <br><br>
+                            <b>Runtime</b>: 217 minutes <br><br>
+                            <b>Descriptors</b>: Japan, France, Sepia, Color, 35mm
+                            <div class="tag-container">
+                                <b>Genres</b>: 
+                                <span class="genre-tag"><label for="drama">Drama</label></span>
+                                <span class="genre-tag"><label for="road">Road Movie</label></span>
+                                <span class="genre-tag"><label for="sof">Slice of Life</label></span>
+                                <span class="genre-tag"><label for="psychological">Psychological Drama</label></span>
+                                <span class="genre-tag"><label for="arthouse">Slow Cinema</label></span>
+                                <span class="genre-tag"><label for="mystery">Whodunit</label></span>
+                            </div>
+                            <b>Language</b>: Japanese
                         </div>
                         <div class="player">
-                            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mJMO0i-xsbc?si=Xfn0U3mKUkU5GoDk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Z1LqrXYfUGc?si=7qJaoqGHAds3CVVq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                            </iframe>
                         </div>
                         <div class="synopsis">
                             <p>
-                                Two old friends meet for dinner; as one tells anecdotes detailing his experiences, the other notices their differing worldviews.
+                                The traumatized survivors of a murderous bus hijacking come together and take a road trip to attempt to overcome their damaged selves. Meanwhile a serial killer is on the loose.
                             </p>
                         </div>
                         <div class="sources">
                             <h1>SOURCES: </h1>
                             <div class="links-icon">
-                                <a href="https://letterboxd.com/film/my-dinner-with-andre/" target="_blank">
+                                <a href="https://letterboxd.com/film/eureka-2000/" target="_blank">
                                     <img src="../ICONS/letterboxd-decal-dots-neg-mono-500px-1003953718.png" alt="Letterboxd" class="icon-small">
                                 </a>
-                                <a href="https://rateyourmusic.com/film/my-dinner-with-andre/" target="_blank">
+                                <a href="https://rateyourmusic.com/film/%E3%83%A6%E3%83%AA%E3%82%A4%E3%82%AB/" target="_blank">
                                     <img src="../ICONS/noun-movie-information-5438289.png" alt="RateYourMovies" class="icon-small">
                                 </a>
-                                <a href="https://en.wikipedia.org/wiki/My_Dinner_with_Andre" target="_blank">
+                                <a href="https://en.wikipedia.org/wiki/Eureka_(2000_film)" target="_blank">
                                     <img src="../ICONS/icons8-wikipedia-144.png" alt="Wikipedia" class="icon-small">
                                 </a>
-                                <a href="https://www.imdb.com/title/tt0082783/" target="_blank">
+                                <a href="https://www.imdb.com/title/tt0243889/" target="_blank">
                                     <img src="../ICONS/imdb.png" alt="IMDB" class="icon-small">
                                 </a>
                             </div>
                         </div>
+                        <div class="sources credits-section">
+                            <h1>CAST</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>役所広司 [Koji Yakusho]</b> <span class="role">Makoto Sawai</span></div>
+                                <div class="credit-item"><b>宮崎あおい [Aoi Miyazaki]</b> <span class="role">Kozue Tamura</span></div>
+                                <div class="credit-item"><b>宮崎将 [Masaru Miyazaki]</b> <span class="role">Naoki Tamura</span></div>
+                                <div class="credit-item"><b>斉藤陽一郎 [Yoichiro Saito]</b> <span class="role">Akihiko</span></div>
+                                <div class="credit-item"><b>光石研 [Ken Mitsuishi]</b> <span class="role">Shigeo</span></div>
+                                <div class="credit-item"><b>椎名英姫 [Eihi Shiina]</b> <span class="role">Keiko Kono</span></div>
+                                <div class="credit-item"><b>尾野真千子 [Machiko Ono]</b> <span class="role">Mikiko Sawai</span></div>
+                                <div class="credit-item"><b>利重剛 [Go Riju]</b> <span class="role">Busjack Man</span></div>
+                                <div class="credit-item"><b>国生さゆり [Sayuri Kokusho]</b> <span class="role">Yumiko</span></div>
+                                <div class="credit-item"><b>Sansei Shiomi</b> <span class="role">Yoshiyuki Sawai</span></div>
+                                <div class="credit-item"><b>でんでん [Denden]</b> <span class="role">Yoshida</span></div>
+                                <div class="credit-item"><b>松重豊 [Yutaka Matsushige]</b> <span class="role">Matsuoka</span></div>
+                                <div class="credit-item"><b>井上肇 [Hajime Inoue]</b> <span class="role">Ichikawa</span></div>
+                            </div>
+
+                            <h1 style="margin-top: 40px;">CREW</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>青山真治 [Shinji Aoyama]</b> <span class="role">Director, Writer, Editor, Composer</span></div>
+                                <div class="credit-item"><b>仙頭武則 [Takenori Sento]</b> <span class="role">Producer</span></div>
+                                <div class="credit-item"><b>田村正毅 [Masaki Tamura]</b> <span class="role">Cinematographer</span></div>
+                                <div class="credit-item"><b>山田勇男 [Isao Yamada]</b> <span class="role">Composer</span></div>
+                                <div class="credit-item"><b>Philippe Avril</b> <span class="role">Co-Producer</span></div>
+                                <div class="credit-item"><b>Yuzuru Sato</b> <span class="role">Gaffer</span></div>
+                                <div class="credit-item"><b>清水剛 [Takeshi Shimizu]</b> <span class="role">Production Designer</span></div>
+                                <div class="credit-item"><b>菊池信之 [Nobuyuki Kikuchi]</b> <span class="role">Sound Engineer</span></div>
+                                <div class="credit-item"><b>Jim O'Rourke</b> <span class="role">Title Song Performer</span></div>
+                            </div>
+                        </div>
                     </aside>
                 </div>
-                <div class="film-card drama postmodernism sof documentary">
+                <div class="film-card drama historical political sof arthouse new-wave">
                     <div class="film-visual">
                         <img src="IMAGES/205538-from-what-is-before-0-2000-0-3000-crop.jpg" alt="From What Is Before (2014)">
                     </div>
@@ -356,10 +620,25 @@
                         <h2 class="alt-title">'Mula sa Kung Ano ang Noon'</h2>
                         <h3 class="crew-name">Lav Diaz</h3>
                         <div class="genre-list">
-                            <b>Genres</b>: Drama, Slow Cinema, Period Drama, Philippine New Wave, Political Drama, Slice of Life	
+                            <b>Release Date</b>: 3 July 2014 <br><br>
+                            <b>Runtime</b>: 338 minutes <br><br>
+                            <b>Descriptors</b>: Philippines, Black & White, Digital
+                            <div class="tag-container">
+                                <b>Genres</b>: 
+                                <span class="genre-tag"><label for="drama">Drama</label></span>
+                                <span class="genre-tag"><label for="historical">Period Drama</label></span>
+                                <span class="genre-tag"><label for="political">Political Drama</label></span>
+                                <span class="genre-tag"><label for="arthouse">Slow Cinema</label></span>
+                                <span class="genre-tag"><label for="sof">Slice of Life</label></span>
+                            </div>
+                            <div class="tag-container">
+                                <b>Movements</b>: 
+                                <span class="genre-tag"><label for="new-wave">Philippine New Wave</label></span>
+                            </div>
+                            <b>Language</b>: Tagalog, English
                         </div>
                         <div class="player">
-                            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mJMO0i-xsbc?si=Xfn0U3mKUkU5GoDk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/1H27S6TNJ_8?si=lPHQpVgyngYRGHHa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                         <div class="synopsis">
                             <p>
@@ -369,23 +648,51 @@
                         <div class="sources">
                             <h1>SOURCES: </h1>
                             <div class="links-icon">
-                                <a href="https://letterboxd.com/film/my-dinner-with-andre/" target="_blank">
+                                <a href="https://letterboxd.com/film/from-what-is-before/" target="_blank">
                                     <img src="../ICONS/letterboxd-decal-dots-neg-mono-500px-1003953718.png" alt="Letterboxd" class="icon-small">
                                 </a>
-                                <a href="https://rateyourmusic.com/film/my-dinner-with-andre/" target="_blank">
+                                <a href="https://rateyourmusic.com/film/mula-sa-kung-ano-ang-noon/" target="_blank">
                                     <img src="../ICONS/noun-movie-information-5438289.png" alt="RateYourMovies" class="icon-small">
                                 </a>
-                                <a href="https://en.wikipedia.org/wiki/My_Dinner_with_Andre" target="_blank">
+                                <a href="https://en.wikipedia.org/wiki/From_What_Is_Before" target="_blank">
                                     <img src="../ICONS/icons8-wikipedia-144.png" alt="Wikipedia" class="icon-small">
                                 </a>
-                                <a href="https://www.imdb.com/title/tt0082783/" target="_blank">
+                                <a href="https://www.imdb.com/title/tt3303310/" target="_blank">
                                     <img src="../ICONS/imdb.png" alt="IMDB" class="icon-small">
                                 </a>
                             </div>
                         </div>
+                        <div class="sources credits-section">
+                            <h1>CAST</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>Perry Dizon</b> <span class="role">Itang</span></div>
+                                <div class="credit-item"><b>Roeder Camañag</b> <span class="role">Andres</span></div>
+                                <div class="credit-item"><b>Hazel Orencio</b> <span class="role">Itang</span></div>
+                                <div class="credit-item"><b>Karenina Haniel</b> <span class="role">Joselito</span></div>
+                                <div class="credit-item"><b>Reynan Abcede</b> <span class="role">Hakob</span></div>
+                                <div class="credit-item"><b>Mailes Kanapi</b> <span class="role">Heding</span></div>
+                                <div class="credit-item"><b>Joel Saracho</b> <span class="role">Father Guido</span></div>
+                                <div class="credit-item"><b>Ian Lomongo</b> <span class="role">Cast</span></div>
+                                <div class="credit-item"><b>Evelyn Vargas</b> <span class="role">Cast</span></div>
+                                <div class="credit-item"><b>Noel Sto. Domingo</b> <span class="role">Cast</span></div>
+                                <div class="credit-item"><b>Ching Valdes-Aran</b> <span class="role">Cast</span></div>
+                                <div class="credit-item"><b>Richard Bolisay</b> <span class="role">Cast</span></div>
+                            </div>
+                            <h1 style="margin-top: 40px;">CREW</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>Lav Diaz</b> <span class="role">Director, Writer, Editor, Cinematography</span></div>
+                                <div class="credit-item"><b>Krzysztof Dabrowski</b> <span class="role">Producer</span></div>
+                                <div class="credit-item"><b>Lav Diaz</b> <span class="role">Producer</span></div>
+                                <div class="credit-item"><b>Hazel Orencio</b> <span class="role">Assistant Director</span></div>
+                                <div class="credit-item"><b>Perry Dizon</b> <span class="role">Production Design</span></div>
+                                <div class="credit-item"><b>Liryc Dela Cruz</b> <span class="role">Art Direction</span></div>
+                                <div class="credit-item"><b>Kim Perez</b> <span class="role">Art Direction</span></div>
+                                <div class="credit-item"><b>Mark Locsin</b> <span class="role">Sound</span></div>
+                            </div>
+                        </div>
                     </aside>
                 </div>
-                <div class="film-card drama postmodernism sof documentary">
+                <div class="film-card drama psychological fantasy music mystery surrealism">
                     <div class="film-visual">
                         <img src="IMAGES/50934-the-double-life-of-veronique-0-2000-0-3000-crop.jpg" alt="The Double Life of Véronique (1991)">
                     </div>
@@ -394,36 +701,80 @@
                         <h2 class="alt-title">'La Double Vie de Véronique'</h2>
                         <h3 class="crew-name">Krzysztof Kieślowski</h3>
                         <div class="genre-list">
-                            <b>Genres</b>: Psychological Drama, Romance, Mystery, Magical Realism, Low Fantasy, Music, Surrealism	
+                            <b>Release Date</b>: 15 May 1991 <br><br>
+                            <b>Runtime</b>: 98 minutes <br><br>
+                            <b>Descriptors</b>: Color, Poland, France, Norway, Dolby Stereo, 35mm
+                            <div class="tag-container">
+                                <b>Genres</b>: 
+                                <span class="genre-tag"><label for="psychological">Psychological Drama</label></span>
+                                <span class="genre-tag"><label for="romance">Romance</label></span>
+                                <span class="genre-tag"><label for="mystery">Mystery</label></span>
+                                <span class="genre-tag"><label for="fantasy">Magical Realism</label></span>
+                                <span class="genre-tag"><label for="fantasy">Low Fantasy</label></span>
+                                <span class="genre-tag"><label for="music">Music</label></span>
+                                <span class="genre-tag"><label for="surrealism">Low Surrealism</label></span>
+                            </div>
+                            <b>Language</b>: French, Polish, Italian
                         </div>
                         <div class="player">
-                            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mJMO0i-xsbc?si=Xfn0U3mKUkU5GoDk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/zPbLBiWxXFU?si=q7w0mXfaJOHC8I55" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                         <div class="synopsis">
+                            <blockquote>Each of us is matched somewhere in the world, by our exact double - someone who shares our thoughts and dreams.</blockquote>
                             <p>
-                                The Philippines, 1972. Mysterious things are happening in a remote barrio. Wails are heard from the forest, cows are hacked to death, a man is found bleeding to death at the crossroad, and houses are burned. Ferdinand E. Marcos announces Proclamation No. 1081, putting the entire country under Martial Law.
+                                Véronique is a beautiful young French woman who aspires to be a renowned singer; Weronika lives in Poland, has a similar career goal and looks identical to Véronique, though the two are not related. The film follows both women as they contend with the ups and downs of their individual lives, with Véronique embarking on an unusual romance with Alexandre Fabbri, a puppeteer who may be able to help her with her existential issues.
                             </p>
                         </div>
                         <div class="sources">
                             <h1>SOURCES: </h1>
                             <div class="links-icon">
-                                <a href="https://letterboxd.com/film/my-dinner-with-andre/" target="_blank">
+                                <a href="https://letterboxd.com/film/the-double-life-of-veronique/" target="_blank">
                                     <img src="../ICONS/letterboxd-decal-dots-neg-mono-500px-1003953718.png" alt="Letterboxd" class="icon-small">
                                 </a>
-                                <a href="https://rateyourmusic.com/film/my-dinner-with-andre/" target="_blank">
+                                <a href="https://rateyourmusic.com/film/la-double-vie-de-veronique/" target="_blank">
                                     <img src="../ICONS/noun-movie-information-5438289.png" alt="RateYourMovies" class="icon-small">
                                 </a>
-                                <a href="https://en.wikipedia.org/wiki/My_Dinner_with_Andre" target="_blank">
+                                <a href="https://en.wikipedia.org/wiki/The_Double_Life_of_Veronique" target="_blank">
                                     <img src="../ICONS/icons8-wikipedia-144.png" alt="Wikipedia" class="icon-small">
                                 </a>
-                                <a href="https://www.imdb.com/title/tt0082783/" target="_blank">
+                                <a href="https://www.imdb.com/title/tt0101765/" target="_blank">
                                     <img src="../ICONS/imdb.png" alt="IMDB" class="icon-small">
                                 </a>
                             </div>
                         </div>
+                        <div class="sources credits-section">
+                            <h1>CAST</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>Irène Jacob</b> <span class="role">Weronika / Véronique</span></div>
+                                <div class="credit-item"><b>Philippe Volter</b> <span class="role">Alexandre Fabbri</span></div>
+                                <div class="credit-item"><b>Władysław Kowalski</b> <span class="role">Weronika's Father</span></div>
+                                <div class="credit-item"><b>Sandrine Dumas</b> <span class="role">Catherine</span></div>
+                                <div class="credit-item"><b>Kalina Jędrusik</b> <span class="role">Choir Director</span></div>
+                                <div class="credit-item"><b>Lorraine Evanoff</b> <span class="role">Claude</span></div>
+                                <div class="credit-item"><b>Guillaume de Tonquédec</b> <span class="role">Serge</span></div>
+                                <div class="credit-item"><b>Claude Duneton</b> <span class="role">Véronique's Father</span></div>
+                                <div class="credit-item"><b>Gilles Gaston-Dreyfus</b> <span class="role">Jean-Pierre</span></div>
+                                <div class="credit-item"><b>Bogusława Schubert</b> <span class="role">Woman in Hat</span></div>
+                            </div>
+
+                            <h1 style="margin-top: 40px;">CREW</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>Krzysztof Kieślowski</b> <span class="role">Director, Screenwriter</span></div>
+                                <div class="credit-item"><b>Krzysztof Piesiewicz</b> <span class="role">Screenwriter</span></div>
+                                <div class="credit-item"><b>Zbigniew Preisner</b> <span class="role">Composer: Original Music</span></div>
+                                <div class="credit-item"><b>Sławomir Idziak</b> <span class="role">Cinematographer</span></div>
+                                <div class="credit-item"><b>Leonardo de La Fuente</b> <span class="role">Producer</span></div>
+                                <div class="credit-item"><b>Jacques Witta</b> <span class="role">Film Editor</span></div>
+                                <div class="credit-item"><b>Patrice Mercier</b> <span class="role">Production Designer</span></div>
+                                <div class="credit-item"><b>Elżbieta Radke</b> <span class="role">Costume Designer</span></div>
+                                <div class="credit-item"><b>Aïlo Auguste-Judith</b> <span class="role">Assistant Editor</span></div>
+                                <div class="credit-item"><b>Urszula Lesiak</b> <span class="role">Assistant Editor</span></div>
+                                <div class="credit-item"><b>Jacques Reboud</b> <span class="role">Assistant Director</span></div>
+                            </div>
+                        </div>
                     </aside>
                 </div>
-                <div class="film-card drama postmodernism sof documentary">
+                <div class="film-card essay experimental documentary">
                     <div class="film-visual">
                         <img src="IMAGES/101559-as-i-was-moving-ahead-occasionally-i-saw-brief-glimpses-o-0-2000-0-3000-crop.jpg" alt="As I Was Moving Ahead, Occasionally I Saw Brief Glimpses of Beauty (2000)">
                     </div>
@@ -431,36 +782,68 @@
                         <h2 class="film-title">As I Was Moving Ahead, Occasionally I Saw Brief Glimpses of Beauty</h2>
                         <h3 class="crew-name">Jonas Mekas</h3>
                         <div class="genre-list">
-                            <b>Genres</b>: 	Diary Film, New American Cinema, Essay Film	
+                            <b>Release Date</b>: 4 November 2000 <br><br>
+                            <b>Runtime</b>: 288 minutes <br><br>
+                            <b>Descriptors</b>: United States, Color, 16mm
+                            <div class="tag-container">
+                                <b>Genres</b>: 
+                                <span class="genre-tag"><label for="documentary">Diary Film</label></span>
+                                <span class="genre-tag"><label for="essay">Essay Film</label></span>
+                            </div>
+                            <div class="tag-container">
+                                <b>Movements</b>: 
+                                <span class="genre-tag"><label for="experimental">New American Cinema</label></span>
+                            </div>
+                            <b>Language</b>: English
                         </div>
                         <div class="player">
-                            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mJMO0i-xsbc?si=Xfn0U3mKUkU5GoDk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/vWtRoPoXOwo?si=dCrnhl3uclRxYRmj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                         <div class="synopsis">
                             <p>
-                                The Philippines, 1972. Mysterious things are happening in a remote barrio. Wails are heard from the forest, cows are hacked to death, a man is found bleeding to death at the crossroad, and houses are burned. Ferdinand E. Marcos announces Proclamation No. 1081, putting the entire country under Martial Law.
+                                A compilation of over 30 years of private home movie footage shot by Lithuanian-American avant-garde director Jonas Mekas, assembled by Mekas “purely by chance”, without concern for chronological order.
                             </p>
                         </div>
                         <div class="sources">
                             <h1>SOURCES: </h1>
                             <div class="links-icon">
-                                <a href="https://letterboxd.com/film/my-dinner-with-andre/" target="_blank">
+                                <a href="https://letterboxd.com/film/as-i-was-moving-ahead-occasionally-i-saw/" target="_blank">
                                     <img src="../ICONS/letterboxd-decal-dots-neg-mono-500px-1003953718.png" alt="Letterboxd" class="icon-small">
                                 </a>
-                                <a href="https://rateyourmusic.com/film/my-dinner-with-andre/" target="_blank">
+                                <a href="https://rateyourmusic.com/film/as-i-was-moving-ahead-occasionally-i-saw-brief-glimpses-of-beauty/" target="_blank">
                                     <img src="../ICONS/noun-movie-information-5438289.png" alt="RateYourMovies" class="icon-small">
                                 </a>
-                                <a href="https://en.wikipedia.org/wiki/My_Dinner_with_Andre" target="_blank">
+                                <a href="https://en.wikipedia.org/wiki/As_I_Was_Moving_Ahead_Occasionally_I_Saw_Brief_Glimpses_of_Beauty" target="_blank">
                                     <img src="../ICONS/icons8-wikipedia-144.png" alt="Wikipedia" class="icon-small">
                                 </a>
-                                <a href="https://www.imdb.com/title/tt0082783/" target="_blank">
+                                <a href="https://www.imdb.com/title/tt0262240/" target="_blank">
                                     <img src="../ICONS/imdb.png" alt="IMDB" class="icon-small">
                                 </a>
                             </div>
                         </div>
+                        <div class="sources credits-section">
+                            <h1>CAST</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>Jonas Mekas</b> <span class="role">Self</span></div>
+                                <div class="credit-item"><b>Adolfas Mekas</b> <span class="role">Self</span></div>
+                                <div class="credit-item"><b>Hollis Frampton</b> <span class="role">Self</span></div>
+                                <div class="credit-item"><b>Peter Kubelka</b> <span class="role">Self</span></div>
+                                <div class="credit-item"><b>Stan Brakhage</b> <span class="role">Self</span></div>
+                                <div class="credit-item"><b>Jane Brakhage</b> <span class="role">Self</span></div>
+                                <div class="credit-item"><b>Paul Sharits</b> <span class="role">Self</span></div>
+                                <div class="credit-item"><b>Ken Jacobs</b> <span class="role">Self</span></div>
+                                <div class="credit-item"><b>P. Adams Sitney</b> <span class="role">Self</span></div>
+                            </div>
+
+                            <h1 style="margin-top: 40px;">CREW</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>Jonas Mekas</b> <span class="role">Dir, Prod, Writer, Cine, Editor, Sound</span></div>
+                                <div class="credit-item"><b>Auguste Varkalis</b> <span class="role">Composer: Original Music</span></div>
+                            </div>
+                        </div>
                     </aside>
                 </div>
-                <div class="film-card drama postmodernism sof documentary">
+                <div class="film-card drama surrealism postmodernism music comedy psychological essay satire family new-wave">
                     <div class="film-visual">
                         <img src="IMAGES/84682-throw-away-your-books-rally-in-the-streets-0-2000-0-3000-crop.jpg" alt="Throw Away Your Books, Rally in the Streets (1971)">
                     </div>
@@ -469,37 +852,86 @@
                         <h2 class="alt-title">'書を捨てよ町へ出よう'</h2>
                         <h3 class="crew-name">Shuji Teriyama</h3>
                         <div class="genre-list">
-                            <b>Genres</b>: Surrealism, Coming-of-Age, Drama, Postmodernism, Music, Experimental, Psychological Drama, Black Comedy, Essay Film, Satire, Family Drama <br><br>
-                            <b>Movements</b>: Japanese New Wave
+                            <b>Release Date</b>: 24 April 1971 <br><br>
+                            <b>Runtime</b>: 138 minutes <br><br>
+                            <b>Descriptors</b>: Japan, Color, Black & White, Mono
+                            <div class="tag-container">
+                                <b>Genres</b>: 
+                                <span class="genre-tag"><label for="surrealism">Surrealism</label></span>
+                                <span class="genre-tag"><label for="cof">Coming-of-Age</label></span>
+                                <span class="genre-tag"><label for="drama">Drama</label></span>
+                                <span class="genre-tag"><label for="postmodernism">Postmodernism</label></span>
+                                <span class="genre-tag"><label for="music">Music</label></span>
+                                <span class="genre-tag"><label for="experimental">Experimental</label></span>
+                                <span class="genre-tag"><label for="psychological">Psychological Drama</label></span>
+                                <span class="genre-tag"><label for="comedy">Black Comedy</label></span>
+                                <span class="genre-tag"><label for="essay">Essay Film</label></span>
+                                <span class="genre-tag"><label for="satire">Satire</label></span>
+                                <span class="genre-tag"><label for="family">Family Drama</label></span>
+                            </div>
+                            <div class="tag-container">
+                                <b>Movements</b>: 
+                                <span class="genre-tag"><label for="new-wave">Japanese New Wave</label></span>
+                            </div>
+                            <b>Language</b>: Japanese
                         </div>
                         <div class="player">
-                            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mJMO0i-xsbc?si=Xfn0U3mKUkU5GoDk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/F881GC05YDw?si=tPaaMlJSbF3SxYCs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                         <div class="synopsis">
                             <p>
-                                The Philippines, 1972. Mysterious things are happening in a remote barrio. Wails are heard from the forest, cows are hacked to death, a man is found bleeding to death at the crossroad, and houses are burned. Ferdinand E. Marcos announces Proclamation No. 1081, putting the entire country under Martial Law.
+                                An experimental, psychedelic odyssey through Japanese subculture experienced via the eyes of a disillusioned young man, who must contend with intense familial dysfunction, psychosexual alienation, and existentialist malaise.
                             </p>
                         </div>
                         <div class="sources">
                             <h1>SOURCES: </h1>
                             <div class="links-icon">
-                                <a href="https://letterboxd.com/film/my-dinner-with-andre/" target="_blank">
+                                <a href="https://letterboxd.com/film/throw-away-your-books-rally-in-the-streets/" target="_blank">
                                     <img src="../ICONS/letterboxd-decal-dots-neg-mono-500px-1003953718.png" alt="Letterboxd" class="icon-small">
                                 </a>
-                                <a href="https://rateyourmusic.com/film/my-dinner-with-andre/" target="_blank">
+                                <a href="https://rateyourmusic.com/film/%E6%9B%B8%E3%82%92%E6%8D%A8%E3%81%A6%E3%82%88%E7%94%BA%E3%81%B8%E5%87%BA%E3%82%88%E3%81%86/" target="_blank">
                                     <img src="../ICONS/noun-movie-information-5438289.png" alt="RateYourMovies" class="icon-small">
                                 </a>
-                                <a href="https://en.wikipedia.org/wiki/My_Dinner_with_Andre" target="_blank">
+                                <a href="https://en.wikipedia.org/wiki/Throw_Away_Your_Books,_Rally_in_the_Streets" target="_blank">
                                     <img src="../ICONS/icons8-wikipedia-144.png" alt="Wikipedia" class="icon-small">
                                 </a>
-                                <a href="https://www.imdb.com/title/tt0082783/" target="_blank">
+                                <a href="https://www.imdb.com/title/tt0228853/" target="_blank">
                                     <img src="../ICONS/imdb.png" alt="IMDB" class="icon-small">
                                 </a>
                             </div>
                         </div>
+                        <div class="sources credits-section">
+                            <h1>CAST</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>小林夕岐子 [Yukiko Kobayashi]</b> <span class="role">Setsuko Kitamura</span></div>
+                                <div class="credit-item"><b>田中筆子 [Fudeko Tanaka]</b> <span class="role">Grandmother</span></div>
+                                <div class="credit-item"><b>平泉成 [Sei Hiraizumi]</b> <span class="role">Soccer Captain</span></div>
+                                <div class="credit-item"><b>浅川マキ [Maki Asakawa]</b> <span class="role">Prostitute - Stairway</span></div>
+                                <div class="credit-item"><b>J.A. シーザー [J.A. Ceasar]</b> <span class="role">Longhaired Poet</span></div>
+                                <div class="credit-item"><b>佐々木英明 [Eimei Sasaki]</b> <span class="role">Eimei Kitamura</span></div>
+                                <div class="credit-item"><b>美輪明宏 [Akihiro Miwa]</b> <span class="role">Maya at the Hell</span></div>
+                                <div class="credit-item"><b>Keiko Niitaka</b> <span class="role">Prostitute Midori</span></div>
+                                <div class="credit-item"><b>鈴木いづみ [Izumi Suzuki]</b> <span class="role">Female Doctor</span></div>
+                            </div>
+
+                            <h1 style="margin-top: 40px;">CREW</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>寺山修司 [Shuji Terayama]</b> <span class="role">Director, Writer, Producer</span></div>
+                                <div class="credit-item"><b>九条今日子 [Kujo Kyoko]</b> <span class="role">Producer</span></div>
+                                <div class="credit-item"><b>鋤田正義 [Masayoshi Sukita]</b> <span class="role">Cinematographer</span></div>
+                                <div class="credit-item"><b>Keiichi Uraoka</b> <span class="role">Film Editor</span></div>
+                                <div class="credit-item"><b>Tokyo Kid Brothers</b> <span class="role">Original Music</span></div>
+                                <div class="credit-item"><b>林静一 [Seiichi Hayashi]</b> <span class="role">Art Director</span></div>
+                                <div class="credit-item"><b>浅川マキ [Maki Asakawa]</b> <span class="role">Original Song(s)</span></div>
+                                <div class="credit-item"><b>J.A. シーザー [J.A. Ceasar]</b> <span class="role">Original Music</span></div>
+                                <div class="credit-item"><b>荒木一郎 [Ichiro Araki]</b> <span class="role">Original Music</span></div>
+                                <div class="credit-item"><b>Kuni Kawachi</b> <span class="role">Original Music</span></div>
+                                <div class="credit-item"><b>下田逸郎 [Itsuro Shimoda]</b> <span class="role">Original Music</span></div>
+                            </div>
+                        </div>
                     </aside>
                 </div>
-                <div class="film-card drama postmodernism sof documentary">
+                <div class="film-card suurealism animation experimental horror comedy">
                     <div class="film-visual">
                         <img src="IMAGES/86601-the-angel-0-2000-0-3000-crop.jpg" alt="The Angel (1982)">
                     </div>
@@ -508,36 +940,65 @@
                         <h2 class="alt-title">'L'Ange'</h2>
                         <h3 class="crew-name">Patrick Bokanowski</h3>
                         <div class="genre-list">
-                            <b>Genres</b>: Experimental, Surrealism, Animation, Gothic, Claymation, Absurdist Comedy, Gothic Horror, Abstract Film	
+                            <b>Release Date</b>: 25 May 1982 <br><br>
+                            <b>Runtime</b>: 64 minutes <br><br>
+                            <b>Descriptors</b>: 35mm, Color, France
+                            <div class="tag-container">
+                                <b>Genres</b>: 
+                                <span class="genre-tag"><label for="experimental">Experimental</label></span>
+                                <span class="genre-tag"><label for="surrealism">Surrealism</label></span>
+                                <span class="genre-tag"><label for="animation">Animation</label></span>
+                                <span class="genre-tag"><label for="horror">Gothic</label></span>
+                                <span class="genre-tag"><label for="animation">Claymation</label></span>
+                                <span class="genre-tag"><label for="comedy">Absurdist Comedy</label></span>
+                                <span class="genre-tag"><label for="horror">Gothic Horror</label></span>
+                                <span class="genre-tag"><label for="experimental">Abstract Film</label></span>
+                            </div>
                         </div>
                         <div class="player">
-                            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mJMO0i-xsbc?si=Xfn0U3mKUkU5GoDk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ERj66hYLCkg?si=5vzwiR2o1DqTfmCO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                         <div class="synopsis">
                             <p>
-                                The Philippines, 1972. Mysterious things are happening in a remote barrio. Wails are heard from the forest, cows are hacked to death, a man is found bleeding to death at the crossroad, and houses are burned. Ferdinand E. Marcos announces Proclamation No. 1081, putting the entire country under Martial Law.
+                                The climbing of an immense staircase made up of the most varied stairs. Symbolic scenes occur on different levels where characters seem to be prisoners of their deeds and of their own folly. The steep staircase leads little by little towards the zones of great light where human beings and nonhuman beings meet.
                             </p>
                         </div>
                         <div class="sources">
                             <h1>SOURCES: </h1>
                             <div class="links-icon">
-                                <a href="https://letterboxd.com/film/my-dinner-with-andre/" target="_blank">
+                                <a href="https://rateyourmusic.com/film/l-ange/" target="_blank">
                                     <img src="../ICONS/letterboxd-decal-dots-neg-mono-500px-1003953718.png" alt="Letterboxd" class="icon-small">
                                 </a>
-                                <a href="https://rateyourmusic.com/film/my-dinner-with-andre/" target="_blank">
+                                <a href="https://letterboxd.com/film/the-angel-1982/" target="_blank">
                                     <img src="../ICONS/noun-movie-information-5438289.png" alt="RateYourMovies" class="icon-small">
                                 </a>
-                                <a href="https://en.wikipedia.org/wiki/My_Dinner_with_Andre" target="_blank">
+                                <a href="https://en.wikipedia.org/wiki/The_Angel_(1982_film)" target="_blank">
                                     <img src="../ICONS/icons8-wikipedia-144.png" alt="Wikipedia" class="icon-small">
                                 </a>
-                                <a href="https://www.imdb.com/title/tt0082783/" target="_blank">
+                                <a href="https://www.imdb.com/title/tt0083559/" target="_blank">
                                     <img src="../ICONS/imdb.png" alt="IMDB" class="icon-small">
                                 </a>
                             </div>
                         </div>
+                        <div class="sources credits-section">
+                            <h1>CAST</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>Jacques Faure</b> <span class="role">L'homme au sabre / sans mains</span></div>
+                                <div class="credit-item"><b>Jean-Marie Bon</b> <span class="role">L'homme au bain</span></div>
+                                <div class="credit-item"><b>Maurice Baquet</b> <span class="role">Le premier bibliothécaire</span></div>
+                                <div class="credit-item"><b>Rita Renoir</b> <span class="role">La femme</span></div>
+                            </div>
+                            <h1 style="margin-top: 40px;">CREW</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>Patrick Bokanowski</b> <span class="role">Dir, Cine, VFX, Editor, Designer</span></div>
+                                <div class="credit-item"><b>Michèle Bokanowski</b> <span class="role">Composer, Sound Editor</span></div>
+                                <div class="credit-item"><b>Philippe Lavalette</b> <span class="role">Cinematographer</span></div>
+                                <div class="credit-item"><b>Jacques Faure</b> <span class="role">Assistant Director</span></div>
+                            </div>
+                        </div>
                     </aside>
                 </div>
-                <div class="film-card drama postmodernism sof documentary">
+                <div class="film-card drama essay arthouse experimental">
                     <div class="film-visual">
                         <img src="IMAGES/73382-news-from-home-0-2000-0-3000-crop.jpg" alt="News From Home (1976)">
                     </div>
@@ -545,31 +1006,61 @@
                         <h2 class="film-title">News From Home</h2>
                         <h3 class="crew-name">Chantal Akerman</h3>
                         <div class="genre-list">
-                            <b>Genres</b>: Essay Film, Slow Cinema, Landscape Film, City Symphony, Structural Film, Diary Film, Phantom Ride	
+                            <b>Release Date</b>: 16 December 1976 <br><br>
+                            <b>Runtime</b>: 85 minutes <br><br>
+                            <b>Descriptors</b>: Belgium, France, Eastmancolor, Mono, 16mm
+                            <div class="tag-container">
+                                <b>Genres</b>: 
+                                <span class="genre-tag"><label for="essay">Essay Film</label></span>
+                                <span class="genre-tag"><label for="arthouse">Slow Cinema</label></span>
+                                <span class="genre-tag"><label for="experimental">Landscape Film</label></span>
+                                <span class="genre-tag"><label for="experimental">City Symphony</label></span>
+                                <span class="genre-tag"><label for="experimental">Structural Film</label></span>
+                                <span class="genre-tag"><label for="documentary">Diary Film</label></span>
+                                <span class="genre-tag"><label for="experimental">Phantom Ride</label></span>
+                            </div>
+                            <b>Language</b>: French
                         </div>
                         <div class="player">
-                            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mJMO0i-xsbc?si=Xfn0U3mKUkU5GoDk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/0uXCMAUuZ7k?si=OhAVUXTrXQgIsQT9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                         <div class="synopsis">
+                            <blockquote>Write to me, it’s all I ask.</blockquote>
                             <p>
-                                The Philippines, 1972. Mysterious things are happening in a remote barrio. Wails are heard from the forest, cows are hacked to death, a man is found bleeding to death at the crossroad, and houses are burned. Ferdinand E. Marcos announces Proclamation No. 1081, putting the entire country under Martial Law.
+                                Impersonal and beautiful images of Akerman’s life in New York are combined with letters from her loving but manipulative mother, read by Akerman herself.
                             </p>
                         </div>
                         <div class="sources">
                             <h1>SOURCES: </h1>
                             <div class="links-icon">
-                                <a href="https://letterboxd.com/film/my-dinner-with-andre/" target="_blank">
+                                <a href="https://letterboxd.com/film/news-from-home/" target="_blank">
                                     <img src="../ICONS/letterboxd-decal-dots-neg-mono-500px-1003953718.png" alt="Letterboxd" class="icon-small">
                                 </a>
                                 <a href="https://rateyourmusic.com/film/my-dinner-with-andre/" target="_blank">
                                     <img src="../ICONS/noun-movie-information-5438289.png" alt="RateYourMovies" class="icon-small">
                                 </a>
-                                <a href="https://en.wikipedia.org/wiki/My_Dinner_with_Andre" target="_blank">
+                                <a href="https://rateyourmusic.com/film/news-from-home/" target="_blank">
                                     <img src="../ICONS/icons8-wikipedia-144.png" alt="Wikipedia" class="icon-small">
                                 </a>
-                                <a href="https://www.imdb.com/title/tt0082783/" target="_blank">
+                                <a href="https://www.imdb.com/title/tt0076452/" target="_blank">
                                     <img src="../ICONS/imdb.png" alt="IMDB" class="icon-small">
                                 </a>
+                            </div>
+                        </div>
+                        <div class="sources credits-section">
+                            <h1>CAST</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>Chantal Akerman</b> <span class="role">Narrator (Voice)</span></div>
+                            </div>
+                            <h1 style="margin-top: 40px;">CREW</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>Chantal Akerman</b> <span class="role">Director, Screenwriter</span></div>
+                                <div class="credit-item"><b>Alain Dahan</b> <span class="role">Producer</span></div>
+                                <div class="credit-item"><b>Babette Mangolte</b> <span class="role">Cinematographer</span></div>
+                                <div class="credit-item"><b>Francine Sandberg</b> <span class="role">Film Editor</span></div>
+                                <div class="credit-item"><b>Guy Cavagnac</b> <span class="role">Co-Producer</span></div>
+                                <div class="credit-item"><b>Liliane de Kermadec</b> <span class="role">Co-Producer</span></div>
+                                <div class="credit-item"><b>Paule Zajdermann</b> <span class="role">Assistant Director</span></div>
                             </div>
                         </div>
                     </aside>
@@ -583,31 +1074,67 @@
                         <h2 class="alt-title">'Зеркало'</h2>
                         <h3 class="crew-name">Andrei Tarkovsky</h3>
                         <div class="genre-list">
-                            <b>Genres</b>: Psychological Drama, Experimental, Essay Film, Slow Cinema, Surrealism, Family Drama, Coming-of-Age, Magical Realism
+                            <b>Release Date</b>: 7 March 1975 <br><br>
+                            <b>Runtime</b>: 108 minutes <br><br>
+                            <b>Descriptors</b>: Soviet Union, Color, Black & White, Mono, Super 8, 16mm, 35mm
+                            <div class="tag-container">
+                                <b>Genres</b>: 
+                                <span class="genre-tag"><label for="psychological">Psychological Drama</label></span>
+                                <span class="genre-tag"><label for="experimental">Experimental</label></span>
+                                <span class="genre-tag"><label for="essay">Essay Film</label></span>
+                                <span class="genre-tag"><label for="arthouse">Slow Cinema</label></span>
+                                <span class="genre-tag"><label for="surrealism">Surrealism</label></span>
+                                <span class="genre-tag"><label for="family">Family Drama</label></span>
+                                <span class="genre-tag"><label for="cof">Coming-of-Age</label></span>
+                                <span class="genre-tag"><label for="fantasy">Magical Realism</label></span>
+                            </div>
+                            <b>Language</b>: Russian, Spanish
                         </div>
                         <div class="player">
-                            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mJMO0i-xsbc?si=Xfn0U3mKUkU5GoDk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/36dhOvzPnIo?si=QtRjhH9afhZgZvXU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                         <div class="synopsis">
                             <p>
-                                The Philippines, 1972. Mysterious things are happening in a remote barrio. Wails are heard from the forest, cows are hacked to death, a man is found bleeding to death at the crossroad, and houses are burned. Ferdinand E. Marcos announces Proclamation No. 1081, putting the entire country under Martial Law.
+                                A dying man in his forties recalls his childhood, his mother, the war and personal moments that tell of and juxtapose pivotal moments in Soviet history with daily life.
                             </p>
                         </div>
                         <div class="sources">
                             <h1>SOURCES: </h1>
                             <div class="links-icon">
-                                <a href="https://letterboxd.com/film/my-dinner-with-andre/" target="_blank">
+                                <a href="https://letterboxd.com/film/mirror/" target="_blank">
                                     <img src="../ICONS/letterboxd-decal-dots-neg-mono-500px-1003953718.png" alt="Letterboxd" class="icon-small">
                                 </a>
-                                <a href="https://rateyourmusic.com/film/my-dinner-with-andre/" target="_blank">
+                                <a href="https://rateyourmusic.com/film/%D0%B7%D0%B5%D1%80%D0%BA%D0%B0%D0%BB%D0%BE/" target="_blank">
                                     <img src="../ICONS/noun-movie-information-5438289.png" alt="RateYourMovies" class="icon-small">
                                 </a>
-                                <a href="https://en.wikipedia.org/wiki/My_Dinner_with_Andre" target="_blank">
+                                <a href="https://en.wikipedia.org/wiki/Mirror_(1975_film)" target="_blank">
                                     <img src="../ICONS/icons8-wikipedia-144.png" alt="Wikipedia" class="icon-small">
                                 </a>
-                                <a href="https://www.imdb.com/title/tt0082783/" target="_blank">
+                                <a href="https://www.imdb.com/title/tt0072443/" target="_blank">
                                     <img src="../ICONS/imdb.png" alt="IMDB" class="icon-small">
                                 </a>
+                            </div>
+                        </div>
+                        <div class="sources credits-section">
+                            <h1>CAST</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>Маргарита Терехова [Margarita Terekhova]</b> <span class="role">Mother / Natalia</span></div>
+                                <div class="credit-item"><b>Олег Янковский [Oleg Yankovsky]</b> <span class="role">Father</span></div>
+                                <div class="credit-item"><b>Филипп Янковский [Philipp Yankovsky]</b> <span class="role">Alexei (5)</span></div>
+                                <div class="credit-item"><b>Игнат Данильцев [Ignat Daniltsev]</b> <span class="role">Alexei (12) / Ignat</span></div>
+                                <div class="credit-item"><b>Николай Гринько [Nikolai Grinko]</b> <span class="role">Printery Director</span></div>
+                                <div class="credit-item"><b>Алла Демидова [Alla Demidova]</b> <span class="role">Lisa</span></div>
+                                <div class="credit-item"><b>Юрий Назаров [Yuri Nazarov]</b> <span class="role">Military Trainer</span></div>
+                                <div class="credit-item"><b>Анатолий Солоницын [Anatoly Solonitsyn]</b> <span class="role">Doctor</span></div>
+                                <div class="credit-item"><b>Тамара Огородникова [Tamara Ogorodnikova]</b> <span class="role">Nanny / Neighbor</span></div>
+                            </div>
+                            <h1 style="margin-top: 40px;">CREW</h1>
+                            <div class="credits-grid">
+                                <div class="credit-item"><b>Андрей Тарковский [Andrei Tarkovsky]</b> <span class="role">Director, Screenwriter</span></div>
+                                <div class="credit-item"><b>Александр Мишарин [Aleksandr Misharin]</b> <span class="role">Screenwriter</span></div>
+                                <div class="credit-item"><b>Георгий Рерберг [Georgy Rerberg]</b> <span class="role">Cinematographer</span></div>
+                                <div class="credit-item"><b>Людмила Фейгинова [Lyudmila Feiginova]</b> <span class="role">Film Editor</span></div>
+                                <div class="credit-item"><b>Эдуард Артемьев [Eduard Artemyev]</b> <span class="role">Composer: Original Music</span></div>
                             </div>
                         </div>
                     </aside>
