@@ -14,11 +14,11 @@
                 transform-origin: top left;
             }
             @media (max-width: 1920px) {
-                .map-ocontainer {
+                .map-container {
                     transform: scale(calc(100vw / 1920));
                 }
             }
-            .map-container img {
+            .map-container > img {
                 display: block;
                 width: 1920px;
                 height: auto;
@@ -58,7 +58,8 @@
                 </nav>
             </div>
         </header>
-            <img src="IMAGES/DREAM PLACES.png" class="map-container" alt="My dream places to visit" usemap="#dreamplaces">
+        <div class="map-container">
+            <img src="IMAGES/DREAM PLACES.png" alt="My dream places to visit" usemap="#dreamplaces">
             <map name="dreamplaces">
                 <area target="_blank" coords="-1,1079,192,1079,416,994,314,729,4,851" alt="France || The Louvre" shape="poly" href="https://www.louvre.fr/en/">
                 <area target="_blank" coords="328,723,726,567,828,834,431,984" alt="Japan || Akibahara" shape="poly" href="https://www.japan-guide.com/e/e3003.html">
@@ -66,7 +67,7 @@
                 <area target="_blank" coords="1138,409,1521,256,1624,524,1238,670" alt="Switzerland || Zermatt" shape="poly" href="https://www.audleytravel.com/switzerland/places-to-go/swiss-alps/zermatt">
                 <area target="_blank" coords="1534,251,1919,102,1919,407,1641,514" alt="Serbia || Kozmaj Monument" shape="poly" href="https://www.tripadvisor.com/Attraction_Review-g1989118-d10712160-Reviews-Kosmaj_Monument-Sopot_Belgrade.html">
             </map>
-            
+        </div>   
             <!-- 
             <a href="https://www.louvre.fr/en/" class="hotspot spot-france" title="France || The Louvre">France</a>
             <a href="computer.htm" class="hotspot spot-japan" title="Japan || Akibahara">Japan</a>
