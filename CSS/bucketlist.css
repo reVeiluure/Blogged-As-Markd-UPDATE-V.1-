@@ -1,0 +1,102 @@
+:root {
+    --bg-color: #f4f4f4; 
+    --black: #000000;
+    --accent: #FF3E00; /* Vibrant Red-Orange */
+    --secondary: #A3E635; /* Lime Green */
+}
+body.page {
+    background-color: var(--bg-color);
+    font-family: 'JetBrains Mono', monospace; 
+    color: var(--black);
+    background-color: #000;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 0);
+    background-size: 40px 40px; 
+}
+.brutalist-gif {
+    width: 100%;
+    border: 4px solid #000;
+    image-rendering: pixelated; 
+    transition: transform 0.1s;
+}
+.bucketlist-card {
+    display: block;
+    width: 95%;
+    max-width: 900px;
+    margin: 100px auto 100px auto;
+    border: 4px solid black;
+    background-color: white;
+    box-shadow: 20px 20px 0 var(--black);
+    padding: 0; 
+}
+.bucketlist-content {
+    padding: 40px;
+}
+.bucketlist-content h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 10vw, 6rem); 
+    line-height: 0.9;
+    margin-bottom: 20px;
+    background: yellow;
+    display: inline-block;
+    padding: 0 10px;
+    transform: rotate(-1deg);
+    border: 3px solid black;
+}
+.bucketlist-content h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    background: var(--black);
+    color: white;
+    display: inline-block;
+    padding: 5px 15px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.bucketlist-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+.bucketlist-content li {
+    background: #fff;
+    border: 3px solid var(--black);
+    margin-bottom: 30px;
+    padding: 25px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    box-shadow: 10px 10px 0px var(--black);
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.bucketlist-content li:nth-child(even) {
+    transform: rotate(1deg);
+    background-color: #eee;
+}
+.bucketlist-content li:hover {
+    transform: translate(-5px, -5px) rotate(0deg);
+    box-shadow: 15px 15px 0px var(--accent);
+    background-color: white;
+}
+.bucketlist-content img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border: 3px solid var(--black);
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+    image-rendering: pixelated;
+}
+.bucketlist-content li:hover img {
+    filter: grayscale(0%);
+    image-rendering: crisp-edges;
+}
+.separator {
+    display: block;
+    height: 10px;
+    background: var(--black);
+    width: 100%;
+    margin: 20px 0;
+}
